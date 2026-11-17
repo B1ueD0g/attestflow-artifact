@@ -3,9 +3,10 @@
   "payload_sha256": {
     ".gitignore": "d127bb2aacf81609f0a7930a6c910ca18b9ba4248fdebdc41b781bd450bc7d5c",
     "ADMISSION.json": "ed8d5a6bb972f44ff4e372389bab64eb4be1d80a800bdb17ff50467e98cee2ac",
-    "CITATION.cff": "9761998bb5e8871851fbf5746dfa81c0a9fc854fe772528fcd6049ee25412155",
-    "PROVENANCE.json": "031fb0e66384d5cfaa22c4543d8d7e22aa46eb028f07eabcde3589f541dba36b",
-    "README.md": "58b5236b928ea24ac6a7a43c21363e08e3ad31a6d01406c0c42fe41f1d882072",
+    "CITATION.cff": "8fba04f902b60853cf0e8c9e601dfb43d5968059a669f86a941ab7813b15a0b3",
+    "LICENSE": "25d90c5951d4aac68d256f5f195d3dcc329389b3c44c7417fc71ca03c1fa07f6",
+    "PROVENANCE.json": "87884ea7d4f33bbefcb1634fd064f3e8bf25ac3d1eecb5dce960ff628cf2a650",
+    "README.md": "3603cbfb13745ec6ea4a943054647da1d43321f93ed888d170a3688638a42c2e",
     "RELEASE_OMISSIONS.json": "1cb3ae043b9eb4a3fee37dfeaa8b0dea56249c406bc570d3088dd20d099ec585",
     "code/analysis/__init__.py": "598624a140a362b1678b8ad466dc0624109037e4a0549c2ce0b9f368ce3ee03d",
     "code/analysis/detection.py": "5cef134479f2dac0be432f483495f5efbacdab0309b070cc87b9e84801ea98fc",

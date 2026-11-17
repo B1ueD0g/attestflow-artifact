@@ -6,7 +6,9 @@ authors:
   - family-names: Bu
     given-names: Songbo
     affiliation: Stevens Institute of Technology
+    orcid: "https://orcid.org/0009-0004-5955-8698"
 repository-code: "https://github.com/B1ueD0g/attestflow-artifact"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-11-17
 abstract: "Bounded offline replay of selected recorded attestation/application evidence and oracle semantics; no native execution is launched."
+license: MIT

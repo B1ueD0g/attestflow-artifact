@@ -3565,12 +3565,17 @@
     "CITATION.cff": {
       "change": "Public-release documentation or regression checks; no native experiment.",
       "original_sha256": null,
-      "sha256": "9761998bb5e8871851fbf5746dfa81c0a9fc854fe772528fcd6049ee25412155"
+      "sha256": "8fba04f902b60853cf0e8c9e601dfb43d5968059a669f86a941ab7813b15a0b3"
+    },
+    "LICENSE": {
+      "change": "Public-release documentation or regression checks; no native experiment.",
+      "original_sha256": null,
+      "sha256": "25d90c5951d4aac68d256f5f195d3dcc329389b3c44c7417fc71ca03c1fa07f6"
     },
     "README.md": {
       "change": "Public-release documentation or regression checks; no native experiment.",
       "original_sha256": null,
-      "sha256": "58b5236b928ea24ac6a7a43c21363e08e3ad31a6d01406c0c42fe41f1d882072"
+      "sha256": "3603cbfb13745ec6ea4a943054647da1d43321f93ed888d170a3688638a42c2e"
     },
     "RELEASE_OMISSIONS.json": {
       "change": "Public release wrapper, dependencies, or exact six-private-key omission adaptation; see README and RELEASE_OMISSIONS.json.",

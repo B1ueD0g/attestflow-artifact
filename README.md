@@ -69,4 +69,4 @@ This release does not rebuild Trustee/guest-components, launch native controls, 
 
 ## Dependencies and rights
 
-No third-party package source or native binary is vendored. Python dependencies are `cryptography` (Apache-2.0 OR BSD-3-Clause) and `jsonschema` (MIT); their dependencies retain their respective upstream licenses. The Lean checker is an optional external tool, not bundled. The original author source files in this repository have no preceding first-party license notice. See `LICENSE` if a redistribution license is supplied by the author; public hosting alone does not supply one.
+No third-party package source or native binary is vendored. Python dependencies are `cryptography` (Apache-2.0 OR BSD-3-Clause) and `jsonschema` (MIT); their dependencies retain their respective upstream licenses. The Lean checker is an optional external tool, not bundled. The author-owned software and associated documentation are distributed under the MIT License in `LICENSE`, as authorized by Songbo Bu. Dependency licenses remain unchanged. The recorded dummy fixture data accompany the offline verification and must not be used as production keys or trust material.
