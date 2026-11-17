@@ -1,0 +1,76 @@
+{
+  "boundary": "transport capture only; no token binding or application verdict",
+  "capture_complete": true,
+  "connection_count": 2,
+  "connections": [
+    {
+      "capture_complete": true,
+      "client_peer": [
+        "127.0.0.1",
+        52214
+      ],
+      "connection_id": "connection-000001",
+      "directions": {
+        "client_to_upstream": {
+          "captured_file_bytes": 912,
+          "captured_file_sha256": "a47ead8ab55117b732120f178108905f3d01ab88fb87dc1780f6adb02330b55d",
+          "eof_observed": true,
+          "read_bytes": 912,
+          "submitted_bytes": 912,
+          "write_eof_submitted": true
+        },
+        "upstream_to_client": {
+          "captured_file_bytes": 2128,
+          "captured_file_sha256": "2c5b0fb8e346980cb5da98b1ecda93a67af9531ed3011985ede3d4690de8ce28",
+          "eof_observed": true,
+          "read_bytes": 2128,
+          "submitted_bytes": 2128,
+          "write_eof_submitted": true
+        }
+      },
+      "ended_unix_ns": 1788849400592112783,
+      "errors": [],
+      "started_unix_ns": 1788849400541521926,
+      "upstream_peer": [
+        "127.0.0.1",
+        8082
+      ]
+    },
+    {
+      "capture_complete": true,
+      "client_peer": [
+        "127.0.0.1",
+        52218
+      ],
+      "connection_id": "connection-000002",
+      "directions": {
+        "client_to_upstream": {
+          "captured_file_bytes": 1792,
+          "captured_file_sha256": "b63288503a496b63075fd8f97824c3c41c6807238de5a76cb8be2dc2cf8afc88",
+          "eof_observed": true,
+          "read_bytes": 1792,
+          "submitted_bytes": 1792,
+          "write_eof_submitted": true
+        },
+        "upstream_to_client": {
+          "captured_file_bytes": 543,
+          "captured_file_sha256": "32497927883d214bd7c0429c51e56477613aca8ebfcc52c6b3fb5909ca513aae",
+          "eof_observed": true,
+          "read_bytes": 543,
+          "submitted_bytes": 543,
+          "write_eof_submitted": true
+        }
+      },
+      "ended_unix_ns": 1788849400610583910,
+      "errors": [],
+      "started_unix_ns": 1788849400582202235,
+      "upstream_peer": [
+        "127.0.0.1",
+        8082
+      ]
+    }
+  ],
+  "ended_unix_ns": 1788849400919793125,
+  "errors": [],
+  "schema": "attestflow-loopback-relay-result-v1"
+}

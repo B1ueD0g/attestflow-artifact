@@ -1,0 +1,15 @@
+{"event": "ACCEPTED", "monotonic_ns": 47124637384018}
+{"event": "UPSTREAM_CONNECTED", "monotonic_ns": 47124638143505, "peer": ["127.0.0.1", 8082]}
+{"direction": "client_to_upstream", "event": "CAPTURED", "monotonic_ns": 47124638640226, "offset": 0, "sha256": "bb2fa3c6b519c25ae670859d2b840f5dc710a6e9a3e6b1f43fc018d2253b6354", "size": 280}
+{"direction": "client_to_upstream", "event": "WRITE_SUBMITTED", "monotonic_ns": 47124639602647, "offset": 0, "size": 280}
+{"direction": "upstream_to_client", "event": "CAPTURED", "monotonic_ns": 47124640200105, "offset": 0, "sha256": "9a7f3edf96033bb8293bca467455365982119d2f705b4728445fbea9bcb85ade", "size": 282}
+{"direction": "upstream_to_client", "event": "WRITE_SUBMITTED", "monotonic_ns": 47124640613643, "offset": 0, "size": 282}
+{"direction": "client_to_upstream", "event": "CAPTURED", "monotonic_ns": 47124641345736, "offset": 280, "sha256": "caeea50ad92d5efc6ee2eaf78e0edd4dc41c82d0b6f5f13972f371162f2bfc0e", "size": 632}
+{"direction": "client_to_upstream", "event": "WRITE_SUBMITTED", "monotonic_ns": 47124642794787, "offset": 280, "size": 632}
+{"direction": "upstream_to_client", "event": "CAPTURED", "monotonic_ns": 47124644613262, "offset": 282, "sha256": "d4d2df494303c87dc351f785e71a2fc3239fa2ae4757257c91466d54921cec66", "size": 1858}
+{"direction": "upstream_to_client", "event": "WRITE_SUBMITTED", "monotonic_ns": 47124645231068, "offset": 282, "size": 1858}
+{"direction": "client_to_upstream", "event": "READ_EOF", "monotonic_ns": 47124649309784}
+{"direction": "client_to_upstream", "event": "WRITE_EOF_SUBMITTED", "monotonic_ns": 47124649729952}
+{"direction": "upstream_to_client", "event": "READ_EOF", "monotonic_ns": 47124652215475}
+{"direction": "upstream_to_client", "event": "WRITE_EOF_SUBMITTED", "monotonic_ns": 47124654349169}
+{"event": "BIDIRECTIONAL_EOF_OBSERVED", "monotonic_ns": 47124656391842}

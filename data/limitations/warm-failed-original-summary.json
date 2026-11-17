@@ -1,0 +1,33 @@
+{
+  "batch_analysis_error": null,
+  "boundary": "Completion is capture/model transfer, not a superiority claim or proof of general security.",
+  "cells": [
+    {
+      "capture_invoked": true,
+      "error": {
+        "message": "'str' object has no attribute 'get'",
+        "type": "AttributeError"
+      },
+      "native_launch_recorded": true,
+      "sequence": "W01",
+      "status": "FAILED_RETAINED"
+    },
+    {
+      "capture_invoked": false,
+      "native_launch_recorded": false,
+      "sequence": "W02",
+      "status": "UNREACHED_AFTER_PRIOR_FAILURE"
+    }
+  ],
+  "ended_at_unix_ns": 1790408847794072000,
+  "native_launches_recorded": 1,
+  "qualified_sequences": 0,
+  "scope": "FROZEN_WARM_POLICY_NATIVE_BATCH_NOT_EXTERNAL_REPLICATION",
+  "source_checkpoint_after": {
+    "at_unix_ns": 1790408847794064000,
+    "freeze_sha256": "72c08358c8105b146a25ba76e9cda508391cbc35335673304daac5644dc8e8c9",
+    "source_count": 41,
+    "status": "PASS"
+  },
+  "status": "INCOMPLETE_RETAINED"
+}

@@ -1,0 +1,11 @@
+{"event": "ACCEPTED", "monotonic_ns": 47110029922625}
+{"event": "UPSTREAM_CONNECTED", "monotonic_ns": 47110031176203, "peer": "/tmp/attestflow-v7-rpc-11xv9qw3/back.sock"}
+{"direction": "client_to_upstream", "event": "CAPTURED", "monotonic_ns": 47110031228054, "offset": 0, "sha256": "f7eaf3999945e756f1b45c326954ae8ec9c5cf08c742ac3c49e51f46ffcbcbec", "size": 507}
+{"direction": "client_to_upstream", "event": "WRITE_SUBMITTED", "monotonic_ns": 47110031671714, "offset": 0, "size": 507}
+{"direction": "upstream_to_client", "event": "CAPTURED", "monotonic_ns": 47110109899966, "offset": 0, "sha256": "3730d7c883a5ad62358596f85aef3ad5737b8bd7e22430feaa2967a2342d8791", "size": 161}
+{"direction": "upstream_to_client", "event": "WRITE_SUBMITTED", "monotonic_ns": 47110110055980, "offset": 0, "size": 161}
+{"direction": "client_to_upstream", "event": "READ_EOF", "monotonic_ns": 47110110177509}
+{"direction": "client_to_upstream", "event": "WRITE_EOF_SUBMITTED", "monotonic_ns": 47110110231531}
+{"direction": "upstream_to_client", "event": "READ_EOF", "monotonic_ns": 47110110264220}
+{"direction": "upstream_to_client", "event": "WRITE_EOF_SUBMITTED", "monotonic_ns": 47110110271819}
+{"event": "BIDIRECTIONAL_EOF_OBSERVED", "monotonic_ns": 47110110279793}

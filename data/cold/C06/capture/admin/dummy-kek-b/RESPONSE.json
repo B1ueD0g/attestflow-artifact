@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "error": null,
+  "host": "127.0.0.1",
+  "method": "POST",
+  "path": "/kbs/v0/resource/default/attestflow-v7/kek-b",
+  "port": 8082,
+  "received_unix_ns": 1788849414619593010,
+  "request_body_sha256": "4c6f00379229a2e12d50e6175c0406c33a87924a867a0f357035bb1449474edc",
+  "response_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_headers": [
+    [
+      "content-length",
+      "0"
+    ],
+    [
+      "connection",
+      "close"
+    ],
+    [
+      "content-type",
+      "text/xml"
+    ],
+    [
+      "date",
+      "Tue, 08 Sep 2026 06:36:54 GMT"
+    ]
+  ],
+  "response_status": 200
+}

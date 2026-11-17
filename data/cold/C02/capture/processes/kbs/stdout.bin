@@ -1,0 +1,62 @@
+[2m2026-09-08T06:35:57.714115Z[0m [32m INFO[0m [2mkbs[0m[2m:[0m Welcome to Confidential Containers Key Broker Service!
+
+
+ ________  ________  ________  ________          ___  __    ________  ________      
+|\   ____\|\   __  \|\   ____\|\   __  \        |\  \|\  \ |\   __  \|\   ____\     
+\ \  \___|\ \  \|\  \ \  \___|\ \  \|\  \       \ \  \/  /|\ \  \|\ /\ \  \___|_    
+ \ \  \    \ \  \\\  \ \  \    \ \  \\\  \       \ \   ___  \ \   __  \ \_____  \   
+  \ \  \____\ \  \\\  \ \  \____\ \  \\\  \       \ \  \\ \  \ \  \|\  \|____|\  \  
+   \ \_______\ \_______\ \_______\ \_______\       \ \__\\ \__\ \_______\____\_\  \ 
+    \|_______|\|_______|\|_______|\|_______|        \|__| \|__|\|_______|\_________\
+                                                                        \|_________|                                                                                                                                                                                           
+                                                                                    
+version: v0.1.0
+commit: 
+buildtime: 2026-09-08 05:18:56 +00:00
+loglevel: info
+
+[2m2026-09-08T06:35:57.714461Z[0m [32m INFO[0m [2mkbs[0m[2m:[0m Using config file /app/output/formal-c02-001/config/kbs.toml
+[2m2026-09-08T06:35:57.715744Z[0m [32m INFO[0m [2mkbs::api_server[0m[2m:[0m KBS storage backend [3mbackend_type[0m[2m=[0mLocalFs
+[2m2026-09-08T06:35:57.719535Z[0m [32m INFO[0m [2mkbs::api_server[0m[2m:[0m Session storage type not configured, using storage backend type: LocalFs
+[2m2026-09-08T06:35:57.719587Z[0m [32m INFO[0m [2mattestation_service[0m[2m:[0m Attestation Service storage backend [3mbackend_type[0m[2m=[0mLocalFs
+[2m2026-09-08T06:35:57.719600Z[0m [32m INFO[0m [1mInitialize RVPS[0m[2m:[0m [2mattestation_service::rvps[0m[2m:[0m launch a built-in RVPS.
+[2m2026-09-08T06:35:57.719706Z[0m [33m WARN[0m [1mInitialize RVPS[0m[2m:[0m [2mreference_value_provider_service::extractors[0m[2m:[0m No configuration for SWID extractor provided. Default will be used.
+[2m2026-09-08T06:35:57.724382Z[0m [32m INFO[0m [2mkbs::api_server[0m[2m:[0m Starting HTTP server at [127.0.0.1:8082]
+[2m2026-09-08T06:35:57.725955Z[0m [32m INFO[0m [2mactix_server::builder[0m[2m:[0m starting 2 workers
+[2m2026-09-08T06:35:57.726011Z[0m [32m INFO[0m [2mactix_server::server[0m[2m:[0m Actix runtime found; starting in Actix runtime
+[2m2026-09-08T06:35:57.726034Z[0m [32m INFO[0m [2mactix_server::server[0m[2m:[0m starting service: "actix-web-service-127.0.0.1:8082", workers: 2, listening on: 127.0.0.1:8082
+[2m2026-09-08T06:35:57.923374Z[0m [32m INFO[0m [2mkbs::admin[0m[2m:[0m Admin access granted as AllowAll authorization_mode is enabled
+[2m2026-09-08T06:35:57.923721Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "GET /kbs/v0/resource-policy HTTP/1.1" 200 19 "-" "-" 0.000630
+[2m2026-09-08T06:35:57.927861Z[0m [32m INFO[0m [2mkbs::admin[0m[2m:[0m Admin access granted as AllowAll authorization_mode is enabled
+[2m2026-09-08T06:35:57.928252Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/resource-policy HTTP/1.1" 200 0 "-" "-" 0.000478
+[2m2026-09-08T06:35:57.930214Z[0m [32m INFO[0m [2mkbs::admin[0m[2m:[0m Admin access granted as AllowAll authorization_mode is enabled
+[2m2026-09-08T06:35:57.930673Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/attestation-policy HTTP/1.1" 200 0 "-" "-" 0.000539
+[2m2026-09-08T06:35:57.934934Z[0m [32m INFO[0m [2mkbs::admin[0m[2m:[0m Admin access granted as AllowAll authorization_mode is enabled
+[2m2026-09-08T06:35:57.935499Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/reference-value HTTP/1.1" 200 0 "-" "-" 0.000684
+[2m2026-09-08T06:35:57.937442Z[0m [32m INFO[0m [2mkbs::admin[0m[2m:[0m Admin access granted as AllowAll authorization_mode is enabled
+[2m2026-09-08T06:35:57.938141Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/resource/default/attestflow-v7/kek-a HTTP/1.1" 200 0 "-" "-" 0.000754
+[2m2026-09-08T06:35:58.096136Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/auth HTTP/1.1" 200 74 "-" "attestation-agent-kbs-client/0.1.0" 0.000459
+[2m2026-09-08T06:35:58.098379Z[0m [32m INFO[0m [2mattestation_service[0m[2m:[0m Verifier/endorsement check passed. [3mtee[0m[2m=[0mSample [3mtee_class[0m[2m=[0m"cpu"
+[2m2026-09-08T06:35:58.099391Z[0m [32m INFO[0m [2mpolicy_engine::policy::rego[0m[2m:[0m No claim data.policy.extensions found in policy.
+[2m2026-09-08T06:35:58.126016Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/attest HTTP/1.1" 200 1648 "-" "attestation-agent-kbs-client/0.1.0" 0.028136
+[2m2026-09-08T06:35:58.134873Z[0m [31mERROR[0m [2mkbs::error[0m[2m:[0m PolicyDeny
+[2m2026-09-08T06:35:58.134909Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "GET /kbs/v0/resource/default/attestflow-v7/kek-a HTTP/1.1" 401 110 "-" "attestation-agent-kbs-client/0.1.0" 0.000946
+[2m2026-09-08T06:35:58.166711Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/auth HTTP/1.1" 200 74 "-" "attestation-agent-kbs-client/0.1.0" 0.000641
+[2m2026-09-08T06:35:58.170279Z[0m [32m INFO[0m [2mattestation_service[0m[2m:[0m Verifier/endorsement check passed. [3mtee[0m[2m=[0mSample [3mtee_class[0m[2m=[0m"cpu"
+[2m2026-09-08T06:35:58.170943Z[0m [32m INFO[0m [2mpolicy_engine::policy::rego[0m[2m:[0m No claim data.policy.extensions found in policy.
+[2m2026-09-08T06:35:58.171443Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/attest HTTP/1.1" 200 1648 "-" "attestation-agent-kbs-client/0.1.0" 0.001599
+[2m2026-09-08T06:35:58.176303Z[0m [31mERROR[0m [2mkbs::error[0m[2m:[0m PolicyDeny
+[2m2026-09-08T06:35:58.176341Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "GET /kbs/v0/resource/default/attestflow-v7/kek-a HTTP/1.1" 401 110 "-" "attestation-agent-kbs-client/0.1.0" 0.001006
+[2m2026-09-08T06:35:58.208145Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/auth HTTP/1.1" 200 74 "-" "attestation-agent-kbs-client/0.1.0" 0.000508
+[2m2026-09-08T06:35:58.210480Z[0m [32m INFO[0m [2mattestation_service[0m[2m:[0m Verifier/endorsement check passed. [3mtee[0m[2m=[0mSample [3mtee_class[0m[2m=[0m"cpu"
+[2m2026-09-08T06:35:58.211231Z[0m [32m INFO[0m [2mpolicy_engine::policy::rego[0m[2m:[0m No claim data.policy.extensions found in policy.
+[2m2026-09-08T06:35:58.211718Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/attest HTTP/1.1" 200 1648 "-" "attestation-agent-kbs-client/0.1.0" 0.001590
+[2m2026-09-08T06:35:58.216236Z[0m [31mERROR[0m [2mkbs::error[0m[2m:[0m PolicyDeny
+[2m2026-09-08T06:35:58.216343Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "GET /kbs/v0/resource/default/attestflow-v7/kek-a HTTP/1.1" 401 110 "-" "attestation-agent-kbs-client/0.1.0" 0.001252
+[2m2026-09-08T06:35:58.247390Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/auth HTTP/1.1" 200 74 "-" "attestation-agent-kbs-client/0.1.0" 0.000428
+[2m2026-09-08T06:35:58.251484Z[0m [32m INFO[0m [2mattestation_service[0m[2m:[0m Verifier/endorsement check passed. [3mtee[0m[2m=[0mSample [3mtee_class[0m[2m=[0m"cpu"
+[2m2026-09-08T06:35:58.252307Z[0m [32m INFO[0m [2mpolicy_engine::policy::rego[0m[2m:[0m No claim data.policy.extensions found in policy.
+[2m2026-09-08T06:35:58.252774Z[0m [32m INFO[0m [2mactix_web::middleware::logger[0m[2m:[0m 127.0.0.1 "POST /kbs/v0/attest HTTP/1.1" 200 1648 "-" "attestation-agent-kbs-client/0.1.0" 0.001711
+[2m2026-09-08T06:35:58.274122Z[0m [32m INFO[0m [2mactix_server::server[0m[2m:[0m SIGTERM received; starting graceful shutdown
+[2m2026-09-08T06:35:58.274161Z[0m [32m INFO[0m [2mactix_server::accept[0m[2m:[0m accept thread stopped
+[2m2026-09-08T06:35:58.274478Z[0m [32m INFO[0m [2mactix_server::worker[0m[2m:[0m shutting down idle worker

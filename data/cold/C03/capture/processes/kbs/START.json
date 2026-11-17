@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/app/bin/kbs",
+    "--config-file",
+    "/app/output/formal-c03-001/config/kbs.toml"
+  ],
+  "capture_complete": false,
+  "cwd": "/app/output/formal-c03-001",
+  "env": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "RUST_LOG": "info",
+    "TZ": "UTC"
+  },
+  "errors": [],
+  "name": "kbs",
+  "pid": null,
+  "process_closed": false,
+  "returncode": null,
+  "signals": [],
+  "started_unix_ns": 1788849371943702124,
+  "streams": {},
+  "timed_out": false
+}

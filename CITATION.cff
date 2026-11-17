@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this versioned replication artifact alongside the associated manuscript."
+title: "Evidence and Oracle Semantics for Testing Attestation-Based Applications: Replication Artifact"
+type: software
+authors:
+  - family-names: Bu
+    given-names: Songbo
+    affiliation: Stevens Institute of Technology
+repository-code: "https://github.com/B1ueD0g/attestflow-artifact"
+version: 1.0.0
+date-released: 2026-11-17
+abstract: "Bounded offline replay of selected recorded attestation/application evidence and oracle semantics; no native execution is launched."

@@ -1,0 +1,16 @@
+POST /kbs/v0/auth HTTP/1.1
+content-type: application/json
+accept: */*
+user-agent: attestation-agent-kbs-client/0.1.0
+host: 127.0.0.1:8081
+content-length: 114
+
+{"version":"0.4.0","tee":"sample","extra-params":{"supported-hash-algorithms":["sha256","sha384","sha512","sm3"]}}POST /kbs/v0/attest HTTP/1.1
+content-type: application/json
+accept: */*
+user-agent: attestation-agent-kbs-client/0.1.0
+cookie: kbs-session-id=0afef207664a4ee79c714fa977eb0b03
+host: 127.0.0.1:8081
+content-length: 407
+
+{"init-data":null,"runtime-data":{"nonce":"9e/NcqDcHsioZuaudc8p3DfrqCMqDKMiITqjxbuFe2Y=","tee-pubkey":{"kty":"EC","crv":"P-256","alg":"ECDH-ES+A256KW","x":"PPn8S4VWSWjyS-SaNaNF2OspG1sbTcn-JerxOydHQkU","y":"OmInWPpypMuIctDXgflD-bYGfrCdtxn822ooxoEdWH0"}},"tee-evidence":{"primary_evidence":{"report_data":"0axfZnNs2NkhVcGrJfkpK9zvqpNj6MKt7LdVkSG5Hd7BKC3g6XgshvJ3e2CdyHOf","svn":"1"},"additional_evidence":""}}

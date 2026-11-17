@@ -1,0 +1,18 @@
+{
+  "boundary": "inline dummy TCP observation; no application verdict",
+  "connect_timeout_seconds": 5.0,
+  "idle_timeout_seconds": 90.0,
+  "listen": [
+    "127.0.0.1",
+    8081
+  ],
+  "max_bytes_per_direction": 16777216,
+  "schema": "attestflow-loopback-relay-v1",
+  "started_unix_ns": 1788849414620410645,
+  "state": "STARTED_NOT_COMPLETE",
+  "transport": "tcp",
+  "upstream": [
+    "127.0.0.1",
+    8082
+  ]
+}

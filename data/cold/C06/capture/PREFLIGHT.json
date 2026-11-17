@@ -1,0 +1,15 @@
+{
+  "aa_socket_exists": false,
+  "collected_unix_ns": 1788849414422772553,
+  "docker_marker": true,
+  "interfaces": [
+    "lo"
+  ],
+  "kernel_cdh_resources_present": false,
+  "kernel_cmdline_sha256": "1cef0749b0c699fc4539ac94932ae3b73475d58b801ec3687fcc4cd45d57ac14",
+  "machine": "aarch64",
+  "pid": 31,
+  "system": "Linux",
+  "tee_paths_present": [],
+  "uid": 0
+}

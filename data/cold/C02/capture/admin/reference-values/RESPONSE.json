@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "error": null,
+  "host": "127.0.0.1",
+  "method": "POST",
+  "path": "/kbs/v0/reference-value",
+  "port": 8082,
+  "received_unix_ns": 1788849357935976842,
+  "request_body_sha256": "60e6d626efc3680b25b97f6b6a6c6ceaed141a45b857f7f7a51d0eec0746b69f",
+  "response_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_headers": [
+    [
+      "content-length",
+      "0"
+    ],
+    [
+      "connection",
+      "close"
+    ],
+    [
+      "content-type",
+      "application/json"
+    ],
+    [
+      "date",
+      "Tue, 08 Sep 2026 06:35:57 GMT"
+    ]
+  ],
+  "response_status": 200
+}

@@ -1,0 +1,159 @@
+{
+  "boundary": "Synthetic development/API qualification only. No native or independent experimental evidence.",
+  "completed_ns": 1789190154524707000,
+  "counts": {
+    "constructed_pairs_retained": 12,
+    "fixture_simulator_executions": 0,
+    "gate_admitted_arm_calls": 18,
+    "mismatched_prediction_rows": 0,
+    "native_calls": 0,
+    "original_function_entries": {
+      "AFullArm.analyze": 12,
+      "B3TraceArm.analyze": 12,
+      "CoreObservationAnalyzer.analyze_pair": 12,
+      "arms.inspect_evidence": 12,
+      "oracle.evaluate_trial": 24,
+      "trace.localize_minimal_loss": 8
+    },
+    "raw_arm_calls_returned": 24,
+    "raw_arm_exceptions": 0,
+    "rejected_gate_raw_diagnostics": 6
+  },
+  "failures": [],
+  "rows": [
+    {
+      "condition": "specificity_valid",
+      "condition_id": "Q00",
+      "health_usable": true,
+      "pair_sha256": "b951f91fb3db069c5a6183bcc9c6c14d2409c15d0f738036a936d7bf3231fa63",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "PASS",
+        "B3_TRACE": "PASS"
+      }
+    },
+    {
+      "condition": "positive_missing_effect",
+      "condition_id": "Q01",
+      "health_usable": false,
+      "pair_sha256": "a02facab679fbbf4fc36a1e07f05b812d7eef75e8abfdfac4bec47f8c9b02116",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "INDETERMINATE",
+        "B3_TRACE": "INDETERMINATE"
+      }
+    },
+    {
+      "condition": "positive_duplicate_effect",
+      "condition_id": "Q02",
+      "health_usable": false,
+      "pair_sha256": "494d06c28f4e9d68db1405d8214e352a40c240cd7c4b6c0de6762c8b89738d3a",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "INDETERMINATE",
+        "B3_TRACE": "INDETERMINATE"
+      }
+    },
+    {
+      "condition": "specificity_missing_effect",
+      "condition_id": "Q03",
+      "health_usable": true,
+      "pair_sha256": "337b70a555c740504c95a7856f1f8b6a3f6603c9b765d2231d359c952372dcb5",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "FAIL",
+        "B3_TRACE": "FAIL"
+      }
+    },
+    {
+      "condition": "specificity_duplicate_effect",
+      "condition_id": "Q04",
+      "health_usable": true,
+      "pair_sha256": "b091b4cc2611b245d0f63f89d24d4a27d032a1e249791a995b02bf17569c122a",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "PASS",
+        "B3_TRACE": "INDETERMINATE"
+      }
+    },
+    {
+      "condition": "negative_no_observed_distinction",
+      "condition_id": "Q05",
+      "health_usable": true,
+      "pair_sha256": "543f69caefc2f3b16cbc70300b065cf5476c9fb445a8f6f842084a30a1bd5fb5",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "INDETERMINATE",
+        "B3_TRACE": "FAIL"
+      }
+    },
+    {
+      "condition": "negative_distinction_reaches_effect",
+      "condition_id": "Q06",
+      "health_usable": true,
+      "pair_sha256": "cb4e9a340b08cc1fab41051e71fa3f56cbe4e94b760971dda78b7140be66f201",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "FAIL",
+        "B3_TRACE": "FAIL"
+      }
+    },
+    {
+      "condition": "negative_zero_effect_missing_edge",
+      "condition_id": "Q07",
+      "health_usable": true,
+      "pair_sha256": "2a66146ca4866a10d444f30fdbd7bf3d8c6bf216702626b072c3b265ae2059e1",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "FAIL",
+        "B3_TRACE": "PASS"
+      }
+    },
+    {
+      "condition": "negative_zero_effect_missing_node",
+      "condition_id": "Q08",
+      "health_usable": false,
+      "pair_sha256": "ff66648cd44747fbb20a795cc7c43b8afeedac28de6ed3713b2ea241bb11594e",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "INDETERMINATE",
+        "B3_TRACE": "PASS"
+      }
+    },
+    {
+      "condition": "negative_zero_effect_cycle",
+      "condition_id": "Q09",
+      "health_usable": true,
+      "pair_sha256": "c48fd4779c7d8644565390f6f90df0e7f00d5f6535087c6a313c790c53b59e2d",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "INDETERMINATE",
+        "B3_TRACE": "PASS"
+      }
+    },
+    {
+      "condition": "specificity_nonhex_commitment",
+      "condition_id": "Q10",
+      "health_usable": true,
+      "pair_sha256": "b70305361a5f808a7daccee6a3cf69290730ff36a27c7dfb7f1bb54ea3a3145b",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "PASS",
+        "B3_TRACE": "PASS"
+      }
+    },
+    {
+      "condition": "negative_nonhex_endpoint_commitment",
+      "condition_id": "Q11",
+      "health_usable": true,
+      "pair_sha256": "5530d4731eda3f43ec7996d28f03045ac4a2bb118ff51c5f38ed94d774593873",
+      "prediction_matched": true,
+      "raw_verdicts": {
+        "A_FULL": "FAIL",
+        "B3_TRACE": "FAIL"
+      }
+    }
+  ],
+  "scope": "SYNTHETIC_DEVELOPMENT_QUALIFICATION",
+  "status": "COMPLETE"
+}

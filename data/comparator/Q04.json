@@ -1,0 +1,400 @@
+{
+  "arms": {
+    "A_FULL": {
+      "gate_admitted": true,
+      "profile": {
+        "arm_id": "A_FULL",
+        "boundary": "Full generated-test, typed-trace, and independent-effect pipeline.",
+        "detector": "attestflow_effect_grounded_oracle",
+        "input_source": "attestflow_contract_compiler",
+        "localizer": "typed_attestflow_trace_frontier",
+        "uses_contract_compiler": true,
+        "uses_effect_for_verdict": true,
+        "uses_trace_for_verdict": true
+      },
+      "raw_diagnostic": {
+        "call_status": "RETURNED",
+        "result": {
+          "frontier": [],
+          "localization_mode": "NOT_APPLICABLE",
+          "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:irrelevant; core-positive=PASS; core-test=PASS; core-localization-probe=NOT_APPLICABLE; irrelevant perturbation preserved the allowed effect",
+          "verdict": "PASS"
+        }
+      },
+      "shared_gate_output": {
+        "call_status": "RETURNED",
+        "result": {
+          "frontier": [],
+          "localization_mode": "NOT_APPLICABLE",
+          "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:irrelevant; core-positive=PASS; core-test=PASS; core-localization-probe=NOT_APPLICABLE; irrelevant perturbation preserved the allowed effect",
+          "verdict": "PASS"
+        }
+      }
+    },
+    "B3_TRACE": {
+      "gate_admitted": true,
+      "profile": {
+        "arm_id": "B3_TRACE",
+        "boundary": "Generic trace differencing uses the same graph endpoints but not the AttestFlow localizer.",
+        "detector": "independent_effect_predicate",
+        "input_source": "checked_in_manual_predicate_pair",
+        "localizer": "generic_graph_commitment_diff",
+        "uses_contract_compiler": false,
+        "uses_effect_for_verdict": true,
+        "uses_trace_for_verdict": true
+      },
+      "raw_diagnostic": {
+        "call_status": "RETURNED",
+        "result": {
+          "frontier": [],
+          "localization_mode": "INDETERMINATE",
+          "reason": "generic trace baseline effect check: relation-preserving test has duplicate effects (2)",
+          "verdict": "INDETERMINATE"
+        }
+      },
+      "shared_gate_output": {
+        "call_status": "RETURNED",
+        "result": {
+          "frontier": [],
+          "localization_mode": "INDETERMINATE",
+          "reason": "generic trace baseline effect check: relation-preserving test has duplicate effects (2)",
+          "verdict": "INDETERMINATE"
+        }
+      }
+    }
+  },
+  "budget": {
+    "budget_id": "development-api-same-observation-v8",
+    "input_candidates": 1,
+    "observer_record_limit": 4,
+    "sut_executions": 2,
+    "timeout_ms": 5000,
+    "trace_event_limit": 16
+  },
+  "budget_ok": true,
+  "condition": "specificity_duplicate_effect",
+  "condition_id": "Q04",
+  "contract": {
+    "actual": {
+      "boundary_id": "request_read",
+      "semantic_path": "evidence.session_context",
+      "value_type": "digest"
+    },
+    "contract_id": "development.v8.semantic-qualification",
+    "controls": {
+      "negative_generation": {
+        "derived_from_relation": true,
+        "expected_effect": false,
+        "one_axis_per_trial": true
+      },
+      "positive": {
+        "expected_effect": true,
+        "must_be_reachable": true,
+        "name": "matching_session"
+      }
+    },
+    "description": "Constructed API observations for a bounded semantic qualification probe.",
+    "effect_observer": {
+      "append_only": true,
+      "boundary_id": "effect_opportunity",
+      "independent_of_sut_decision_log": true,
+      "type": "local_effect_ledger",
+      "uses_dummy_resource": true
+    },
+    "expected": {
+      "boundary_id": "policy_load",
+      "semantic_path": "request.current_context",
+      "value_type": "digest"
+    },
+    "failure_policy": {
+      "missing_trace": "indeterminate",
+      "observer_unavailable": "indeterminate",
+      "positive_unreachable": "invalid_test",
+      "relation_violation": "deny"
+    },
+    "observation_graph": {
+      "edges": [
+        {
+          "from": "request_read",
+          "to": "application_gate"
+        },
+        {
+          "from": "policy_load",
+          "to": "application_gate"
+        },
+        {
+          "from": "application_gate",
+          "to": "effect_opportunity"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "request_read"
+        },
+        {
+          "id": "policy_load"
+        },
+        {
+          "id": "application_gate"
+        },
+        {
+          "id": "effect_opportunity"
+        }
+      ],
+      "on_incomparable_minima": "candidate_frontier",
+      "order_semantics": "happens_before_dag_per_attempt",
+      "retry_model": "separate_attempt_nodes"
+    },
+    "protected_effect": {
+      "effect_id": "release_synthetic_session_key",
+      "kind": "dummy_resource_release",
+      "resource_class": "synthetic"
+    },
+    "relation": {
+      "failure_semantics": "deny_effect",
+      "operator": "equal"
+    },
+    "security_boundary": {
+      "execution": "local_offline",
+      "public_scanning": false,
+      "requires_undisclosed_vulnerability": false,
+      "target_ownership": "researcher_controlled",
+      "uses_real_secret": false
+    },
+    "test_domain": {
+      "compiler_derives_mutations": true,
+      "deterministic_seed": 20260912,
+      "distinct_contexts_min": 2,
+      "fixture_class": "local_generated",
+      "values_are_synthetic": true
+    },
+    "trace_policy": {
+      "commitment": "hmac-sha256",
+      "correlation_ids": [
+        "trial_id",
+        "attempt_id",
+        "event_id",
+        "request_id",
+        "decision_id",
+        "effect_id",
+        "policy_epoch"
+      ],
+      "event_causality": "predecessor_event_ids",
+      "log_raw_values": false,
+      "on_ambiguous": "indeterminate",
+      "on_incomparable_minima": "candidate_frontier",
+      "on_missing": "indeterminate"
+    },
+    "version": "1.0"
+  },
+  "effect_records": 3,
+  "health": {
+    "observer_chain_valid": true,
+    "positive_control_reachable": true,
+    "reasons": [],
+    "trace_complete": true
+  },
+  "health_usable": true,
+  "pair": {
+    "positive": {
+      "effect_records": [
+        {
+          "attempt_id": "attempt-Q04-positive",
+          "effect_id": "release_synthetic_session_key",
+          "observed_at_sequence": 10,
+          "request_id": "Q04-request-positive",
+          "resource_commitment": "9e97056dbb0b0837cbc94c1cd1b83873f91187831daa1dea141c72b275b9b911",
+          "trial_id": "trial-Q04-positive"
+        }
+      ],
+      "observer_available": true,
+      "trace_events": [
+        {
+          "attempt_id": "attempt-Q04-positive",
+          "decision": null,
+          "decision_id": "decision-handle-attempt-Q04-positive",
+          "dependency_commitment": "1e4423ff929660c272f871809aa5aae1b9411a4be4f01316a5717106733cc8d9",
+          "effect_id": "release_synthetic_session_key",
+          "event_id": "attempt-Q04-positive:request_read",
+          "node_id": "request_read",
+          "policy_epoch": 1,
+          "predecessor_event_ids": [],
+          "request_id": "Q04-request-positive",
+          "sequence": 1,
+          "trial_id": "trial-Q04-positive"
+        },
+        {
+          "attempt_id": "attempt-Q04-positive",
+          "decision": null,
+          "decision_id": "decision-handle-attempt-Q04-positive",
+          "dependency_commitment": "4b67a233a8877ed093000ac4b6a348c674029f76298b5bdb41a4950c4c31fad8",
+          "effect_id": "release_synthetic_session_key",
+          "event_id": "attempt-Q04-positive:policy_load",
+          "node_id": "policy_load",
+          "policy_epoch": 1,
+          "predecessor_event_ids": [],
+          "request_id": "Q04-request-positive",
+          "sequence": 2,
+          "trial_id": "trial-Q04-positive"
+        },
+        {
+          "attempt_id": "attempt-Q04-positive",
+          "decision": "allow",
+          "decision_id": "decision-handle-attempt-Q04-positive",
+          "dependency_commitment": "d970bc89d675b41a9480779ee61e766ab91a7f6ef53633968061daf7f6e89b2e",
+          "effect_id": "release_synthetic_session_key",
+          "event_id": "attempt-Q04-positive:application_gate",
+          "node_id": "application_gate",
+          "policy_epoch": 1,
+          "predecessor_event_ids": [
+            "attempt-Q04-positive:request_read",
+            "attempt-Q04-positive:policy_load"
+          ],
+          "request_id": "Q04-request-positive",
+          "sequence": 3,
+          "trial_id": "trial-Q04-positive"
+        },
+        {
+          "attempt_id": "attempt-Q04-positive",
+          "decision": null,
+          "decision_id": "decision-handle-attempt-Q04-positive",
+          "dependency_commitment": "f9f193072b0d03aaaaef2c9c9446facfd93634edaa6e3cf3638d49e150c95f42",
+          "effect_id": "release_synthetic_session_key",
+          "event_id": "attempt-Q04-positive:effect_opportunity",
+          "node_id": "effect_opportunity",
+          "policy_epoch": 1,
+          "predecessor_event_ids": [
+            "attempt-Q04-positive:application_gate"
+          ],
+          "request_id": "Q04-request-positive",
+          "sequence": 4,
+          "trial_id": "trial-Q04-positive"
+        }
+      ],
+      "trial": {
+        "actual_value": "context-e6109ae93181ba5f1077a794",
+        "changed_fields": [],
+        "expected_value": "context-e6109ae93181ba5f1077a794",
+        "family_id": "DEVELOPMENT_API",
+        "irrelevant_label": "irrelevant-a514c8a69f149c7147cc9caf",
+        "policy_epoch": 1,
+        "request_id": "Q04-request-positive",
+        "role": "positive",
+        "scenario_id": "Q04-positive"
+      }
+    },
+    "test": {
+      "effect_records": [
+        {
+          "attempt_id": "attempt-Q04-test",
+          "effect_id": "release_synthetic_session_key",
+          "observed_at_sequence": 10,
+          "request_id": "Q04-request-test",
+          "resource_commitment": "9e97056dbb0b0837cbc94c1cd1b83873f91187831daa1dea141c72b275b9b911",
+          "trial_id": "trial-Q04-test"
+        },
+        {
+          "attempt_id": "attempt-Q04-test",
+          "effect_id": "release_synthetic_session_key",
+          "observed_at_sequence": 11,
+          "request_id": "Q04-request-test",
+          "resource_commitment": "9e97056dbb0b0837cbc94c1cd1b83873f91187831daa1dea141c72b275b9b911",
+          "trial_id": "trial-Q04-test"
+        }
+      ],
+      "observer_available": true,
+      "trace_events": [
+        {
+          "attempt_id": "attempt-Q04-test",
+          "decision": null,
+          "decision_id": "decision-handle-attempt-Q04-test",
+          "dependency_commitment": "1e4423ff929660c272f871809aa5aae1b9411a4be4f01316a5717106733cc8d9",
+          "effect_id": "release_synthetic_session_key",
+          "event_id": "attempt-Q04-test:request_read",
+          "node_id": "request_read",
+          "policy_epoch": 1,
+          "predecessor_event_ids": [],
+          "request_id": "Q04-request-test",
+          "sequence": 1,
+          "trial_id": "trial-Q04-test"
+        },
+        {
+          "attempt_id": "attempt-Q04-test",
+          "decision": null,
+          "decision_id": "decision-handle-attempt-Q04-test",
+          "dependency_commitment": "4b67a233a8877ed093000ac4b6a348c674029f76298b5bdb41a4950c4c31fad8",
+          "effect_id": "release_synthetic_session_key",
+          "event_id": "attempt-Q04-test:policy_load",
+          "node_id": "policy_load",
+          "policy_epoch": 1,
+          "predecessor_event_ids": [],
+          "request_id": "Q04-request-test",
+          "sequence": 2,
+          "trial_id": "trial-Q04-test"
+        },
+        {
+          "attempt_id": "attempt-Q04-test",
+          "decision": "allow",
+          "decision_id": "decision-handle-attempt-Q04-test",
+          "dependency_commitment": "d970bc89d675b41a9480779ee61e766ab91a7f6ef53633968061daf7f6e89b2e",
+          "effect_id": "release_synthetic_session_key",
+          "event_id": "attempt-Q04-test:application_gate",
+          "node_id": "application_gate",
+          "policy_epoch": 1,
+          "predecessor_event_ids": [
+            "attempt-Q04-test:request_read",
+            "attempt-Q04-test:policy_load"
+          ],
+          "request_id": "Q04-request-test",
+          "sequence": 3,
+          "trial_id": "trial-Q04-test"
+        },
+        {
+          "attempt_id": "attempt-Q04-test",
+          "decision": null,
+          "decision_id": "decision-handle-attempt-Q04-test",
+          "dependency_commitment": "f9f193072b0d03aaaaef2c9c9446facfd93634edaa6e3cf3638d49e150c95f42",
+          "effect_id": "release_synthetic_session_key",
+          "event_id": "attempt-Q04-test:effect_opportunity",
+          "node_id": "effect_opportunity",
+          "policy_epoch": 1,
+          "predecessor_event_ids": [
+            "attempt-Q04-test:application_gate"
+          ],
+          "request_id": "Q04-request-test",
+          "sequence": 4,
+          "trial_id": "trial-Q04-test"
+        }
+      ],
+      "trial": {
+        "actual_value": "context-e6109ae93181ba5f1077a794",
+        "changed_fields": [
+          "irrelevant"
+        ],
+        "expected_value": "context-e6109ae93181ba5f1077a794",
+        "family_id": "DEVELOPMENT_API",
+        "irrelevant_label": "irrelevant-e19c5a8d7bcf64e7f0875e5c",
+        "policy_epoch": 1,
+        "request_id": "Q04-request-test",
+        "role": "specificity_control",
+        "scenario_id": "Q04-test"
+      }
+    }
+  },
+  "pair_sha256": "b091b4cc2611b245d0f63f89d24d4a27d032a1e249791a995b02bf17569c122a",
+  "prediction_matched": true,
+  "predictions": {
+    "health_usable": true,
+    "raw_verdicts": {
+      "A_FULL": "PASS",
+      "B3_TRACE": "INDETERMINATE"
+    }
+  },
+  "raw_verdicts": {
+    "A_FULL": "PASS",
+    "B3_TRACE": "INDETERMINATE"
+  },
+  "same_pair_unmodified": true,
+  "scope": "SYNTHETIC_DEVELOPMENT_QUALIFICATION",
+  "trace_records": 8
+}

@@ -1,0 +1,11 @@
+{
+  "annotation_sha256": "8d47d16506e9fe66335cb48222ed1815128c3d905d00253397f2b298b2dc4bd0",
+  "boundary": "input shape only; no LEK/reference/prediction read, decryption or case-label rule",
+  "broker_index_sha256": "33543c4c98865b13f232bbd470c8d927c00742e1d4a11e7a38ec686ea3ed8a42",
+  "client_input_sha256": "4a7e270bc4405a508e3c4be0854c6099ad67fe64a04f44ca410c5f9db320606c",
+  "requested_resource": "kbs:///default/attestflow-v7/kek-b",
+  "resource_sha256": {
+    "kbs:///default/attestflow-v7/kek-a": "ab43cb7083085d805e5fbaa17765bde09309cd982775b58274b5cf1d20ca7929",
+    "kbs:///default/attestflow-v7/kek-b": "738e57f257c2a08ab78494de30f2690630442c9e7b83ed2eab9416a7f2aac954"
+  }
+}

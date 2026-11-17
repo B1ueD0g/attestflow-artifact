@@ -1,0 +1,7 @@
+{
+  "listen": "/tmp/attestflow-v7-rpc-mv4ppl4_/front.sock",
+  "private_socket_dir": "/tmp/attestflow-v7-rpc-mv4ppl4_",
+  "scope": "dummy CDH RPC only; never AA GetToken",
+  "transport": "unix_cdh_rpc",
+  "upstream": "/tmp/attestflow-v7-rpc-mv4ppl4_/back.sock"
+}

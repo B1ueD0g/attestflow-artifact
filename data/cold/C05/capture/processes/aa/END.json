@@ -1,0 +1,45 @@
+{
+  "argv": [
+    "/app/bin/ttrpc-aa",
+    "--config-file",
+    "/app/output/formal-c05-001/config/aa.toml",
+    "--attestation_sock",
+    "unix:///run/confidential-containers/attestation-agent/attestation-agent.sock"
+  ],
+  "capture_complete": true,
+  "cwd": "/app/output/formal-c05-001",
+  "ended_unix_ns": 1788849400611534115,
+  "env": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "RUST_LOG": "info",
+    "TZ": "UTC"
+  },
+  "errors": [],
+  "name": "aa",
+  "pid": 46,
+  "process_closed": true,
+  "returncode": 0,
+  "signals": [
+    {
+      "reason": "registered_child_cleanup",
+      "signal": "SIGINT",
+      "unix_ns": 1788849400608878301
+    }
+  ],
+  "started_unix_ns": 1788849400387237671,
+  "streams": {
+    "stderr": {
+      "bytes": 0,
+      "eof": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 2609,
+      "eof": true,
+      "sha256": "541dcb3fbac2bcc6c1657123ceb998adcd313ed40468ce655d6152175893d7a4"
+    }
+  },
+  "timed_out": false
+}

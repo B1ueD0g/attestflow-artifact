@@ -1,0 +1,37 @@
+{
+  "boundary": "transport capture only; no token binding or application verdict",
+  "capture_complete": true,
+  "connection_count": 1,
+  "connections": [
+    {
+      "capture_complete": true,
+      "client_peer": "",
+      "connection_id": "connection-000001",
+      "directions": {
+        "client_to_upstream": {
+          "captured_file_bytes": 507,
+          "captured_file_sha256": "a10092eb8920773f9545477dadb9e50320378d69f08cbad440981bfafb8a5ef1",
+          "eof_observed": true,
+          "read_bytes": 507,
+          "submitted_bytes": 507,
+          "write_eof_submitted": true
+        },
+        "upstream_to_client": {
+          "captured_file_bytes": 166,
+          "captured_file_sha256": "659d538e647a175e2aa1ec8aa567c40962af33f13b372abdc331e40727ff62b3",
+          "eof_observed": true,
+          "read_bytes": 166,
+          "submitted_bytes": 166,
+          "write_eof_submitted": true
+        }
+      },
+      "ended_unix_ns": 1788849414794421670,
+      "errors": [],
+      "started_unix_ns": 1788849414693292155,
+      "upstream_peer": "/tmp/attestflow-v7-rpc-r0ilbh1r/back.sock"
+    }
+  ],
+  "ended_unix_ns": 1788849415117629498,
+  "errors": [],
+  "schema": "attestflow-loopback-relay-result-v1"
+}

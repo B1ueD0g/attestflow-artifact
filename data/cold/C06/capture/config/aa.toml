@@ -1,0 +1,10 @@
+[token_configs.kbs]
+url = "http://127.0.0.1:8081"
+tee_key_algorithm = "ECDH-ES+A256KW-P256"
+
+[eventlog_config]
+init_pcr = 17
+enable_eventlog = false
+
+[log]
+level = "info"

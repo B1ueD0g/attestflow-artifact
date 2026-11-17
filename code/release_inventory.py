@@ -1,0 +1,25 @@
+"""Exact public-release inventory, with six fixed private-key omissions.
+
+The original capture manifests are unchanged and pinned. Every original payload
+other than the case-specific signing private key must still exist with exactly
+its original digest; added files are also rejected by the caller. This is a
+released subset check, not full verification of the original capture manifest.
+"""
+from pathlib import Path
+import hashlib
+import json
+
+PINS = {'C01': {'capture_manifest_sha256': 'e769f57616a786aa94e92762805a531b49aedce95ed97d2f2e4c7f01484a5817', 'omitted_path': 'private/as-signing-key.pem', 'omitted_sha256': 'aac902a145c0ee3d5ec600ca11ea2594b45a329a9b638b12fc3383389ee57798', 'bytes': 227, 'reason': 'Locally generated fixture signing private key; not needed to verify retained signatures.'}, 'C02': {'capture_manifest_sha256': '61643eb889023387b904cc0b1570acccf770ccb11a5ca585d37710f7ff7d55e2', 'omitted_path': 'private/as-signing-key.pem', 'omitted_sha256': '7a035613df69b883b195bc12c1d3203a9326789513b3ae14d054f526c40e8559', 'bytes': 227, 'reason': 'Locally generated fixture signing private key; not needed to verify retained signatures.'}, 'C03': {'capture_manifest_sha256': 'c0399ad207deda2d5c5ced5a2515fe44ca767a2f10617d5d7832a77258888b0b', 'omitted_path': 'private/as-signing-key.pem', 'omitted_sha256': '78e0c28e151c0b0e14dcb40273f8f1d96086a9da1309a80a43cd77378950bbcb', 'bytes': 227, 'reason': 'Locally generated fixture signing private key; not needed to verify retained signatures.'}, 'C04': {'capture_manifest_sha256': 'ac56cbb8e03cce49de9f42e443a20dd179121b52c7b6e89dcaac10bdc1646cb8', 'omitted_path': 'private/as-signing-key.pem', 'omitted_sha256': '114212a60ae9db75af30476458d339bc4178ccd24629268d81f3304332a39f5d', 'bytes': 227, 'reason': 'Locally generated fixture signing private key; not needed to verify retained signatures.'}, 'C05': {'capture_manifest_sha256': '56206795f009d8809a92f6af45500f77a01d7677d07fa78fc31e482ad0904990', 'omitted_path': 'private/as-signing-key.pem', 'omitted_sha256': '0daed5a1dd1737174ad1ab89ba7c4d6186aa099af5d31965c87ac383d10b2809', 'bytes': 227, 'reason': 'Locally generated fixture signing private key; not needed to verify retained signatures.'}, 'C06': {'capture_manifest_sha256': '9e91943e9e8a36dfa583cb46cdb31f2e086fec8b7baadc7baec2b92951d530e7', 'omitted_path': 'private/as-signing-key.pem', 'omitted_sha256': '8c884d0c385e338824ad8f6d46ce1bc6973427b3e20863316d0ab3e5302ba14c', 'bytes': 227, 'reason': 'Locally generated fixture signing private key; not needed to verify retained signatures.'}}
+
+def retained_payload(root, manifest):
+    case = Path(root).parent.name
+    if case not in PINS:
+        raise ValueError("unregistered public capture")
+    pin = PINS[case]
+    actual_manifest = hashlib.sha256((Path(root)/"MANIFEST.json").read_bytes()).hexdigest()
+    if actual_manifest != pin["capture_manifest_sha256"]:
+        raise ValueError("original capture manifest pin mismatch")
+    expected = dict(manifest["payload_sha256"])
+    if expected.pop(pin["omitted_path"], None) != pin["omitted_sha256"]:
+        raise ValueError("signing-key omission pin mismatch")
+    return expected

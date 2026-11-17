@@ -1,0 +1,304 @@
+{
+  "actual_contra": true,
+  "boundary": "Local constructed control; trust in launch/recorder/clocks/source is explicit. No other outlet, root-resistant proof, external replication, vulnerability or method advantage.",
+  "diagnostics": {
+    "http_chain": {
+      "actual_contra": true,
+      "actual_cpu_ear_statuses": [
+        "contraindicated"
+      ],
+      "all_get_count": 3,
+      "all_gets_explicit_policy_deny": true,
+      "any_resource_http_200": false,
+      "boundary": "Signed EAR associated with every actual GET; HTTP 200 alone establishes neither JWE structure nor direct KEK plaintext observation.",
+      "first_http_monotonic_ns": 47124567108980,
+      "handshakes": [
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "attest_response_wall_interval_ns": [
+            1788849358126192301,
+            1788849358126192926
+          ],
+          "connection": "connection-000001",
+          "token_sha256": "ccff4287d9bdb2efd720119af8ae32b59bba0beffd2a2d1c6205dc3458bb9795",
+          "used_by_resource_get": true
+        },
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "attest_response_wall_interval_ns": [
+            1788849358171525922,
+            1788849358171526423
+          ],
+          "connection": "connection-000003",
+          "token_sha256": "85b6550a99d8f67fe1615ed546eaf3a875171e4cd2482a2f1df9f24b22e61879",
+          "used_by_resource_get": true
+        },
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "attest_response_wall_interval_ns": [
+            1788849358211881577,
+            1788849358211881785
+          ],
+          "connection": "connection-000004",
+          "token_sha256": "c1b946e401267f2f8a81b51598c9446c2afe7b84af010bb6fbe5c75fbc621ced",
+          "used_by_resource_get": true
+        },
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "attest_response_wall_interval_ns": [
+            1788849358252827976,
+            1788849358252828226
+          ],
+          "connection": "connection-000005",
+          "token_sha256": "de9567b923641edf9b8092d4a5319275d6cc89fbe77ff20e7cf63e7d47637b12",
+          "used_by_resource_get": false
+        }
+      ],
+      "http_exchange_count": 11,
+      "http_messages": [
+        {
+          "connection": "connection-000001",
+          "method": "POST",
+          "request_offsets": [
+            0,
+            280
+          ],
+          "request_sha256": "bb2fa3c6b519c25ae670859d2b840f5dc710a6e9a3e6b1f43fc018d2253b6354",
+          "response_offsets": [
+            0,
+            282
+          ],
+          "response_sha256": "ca4198deff0d6dd40334f3c51abc237cf5fc44e2e649ab51aa4640e5fb47d8b8",
+          "status": 200,
+          "target": "/kbs/v0/auth"
+        },
+        {
+          "connection": "connection-000001",
+          "method": "POST",
+          "request_offsets": [
+            280,
+            912
+          ],
+          "request_sha256": "a6cf41eefa9099ebab0c0b1c3c5dd0dbfda33405294618acef81b9a48435f9a5",
+          "response_offsets": [
+            282,
+            2140
+          ],
+          "response_sha256": "130e6afb4021b741c93de25ca9554510445a5acd036d2b3fdf9c02599974555c",
+          "status": 200,
+          "target": "/kbs/v0/attest"
+        },
+        {
+          "connection": "connection-000002",
+          "method": "GET",
+          "request_offsets": [
+            0,
+            1804
+          ],
+          "request_sha256": "65b3dcd7de59536430c71b7c48ccf86e3fb8650e6ef2f644288af0534f083781",
+          "response_offsets": [
+            0,
+            197
+          ],
+          "response_sha256": "50daaf66f03e126cadd94295f449a7b8ae27ff077fd00beca1a35c35c1e74e6a",
+          "status": 401,
+          "target": "/kbs/v0/resource/default/attestflow-v7/kek-a"
+        },
+        {
+          "connection": "connection-000003",
+          "method": "POST",
+          "request_offsets": [
+            0,
+            280
+          ],
+          "request_sha256": "bb2fa3c6b519c25ae670859d2b840f5dc710a6e9a3e6b1f43fc018d2253b6354",
+          "response_offsets": [
+            0,
+            282
+          ],
+          "response_sha256": "9a7f3edf96033bb8293bca467455365982119d2f705b4728445fbea9bcb85ade",
+          "status": 200,
+          "target": "/kbs/v0/auth"
+        },
+        {
+          "connection": "connection-000003",
+          "method": "POST",
+          "request_offsets": [
+            280,
+            912
+          ],
+          "request_sha256": "caeea50ad92d5efc6ee2eaf78e0edd4dc41c82d0b6f5f13972f371162f2bfc0e",
+          "response_offsets": [
+            282,
+            2140
+          ],
+          "response_sha256": "d4d2df494303c87dc351f785e71a2fc3239fa2ae4757257c91466d54921cec66",
+          "status": 200,
+          "target": "/kbs/v0/attest"
+        },
+        {
+          "connection": "connection-000002",
+          "method": "GET",
+          "request_offsets": [
+            1804,
+            3608
+          ],
+          "request_sha256": "439b300856e4dd700771ef043c201b9434650778bd4d0707da0b794630e46745",
+          "response_offsets": [
+            197,
+            394
+          ],
+          "response_sha256": "50daaf66f03e126cadd94295f449a7b8ae27ff077fd00beca1a35c35c1e74e6a",
+          "status": 401,
+          "target": "/kbs/v0/resource/default/attestflow-v7/kek-a"
+        },
+        {
+          "connection": "connection-000004",
+          "method": "POST",
+          "request_offsets": [
+            0,
+            280
+          ],
+          "request_sha256": "bb2fa3c6b519c25ae670859d2b840f5dc710a6e9a3e6b1f43fc018d2253b6354",
+          "response_offsets": [
+            0,
+            282
+          ],
+          "response_sha256": "2d74751630be74b4ec6b3a67d032efe6bdc3b586a6491ae39da916117f45a721",
+          "status": 200,
+          "target": "/kbs/v0/auth"
+        },
+        {
+          "connection": "connection-000004",
+          "method": "POST",
+          "request_offsets": [
+            280,
+            912
+          ],
+          "request_sha256": "55038410f38189230d4d997a1706af98fdc869143e9ba76b1c198e05ecc17fdc",
+          "response_offsets": [
+            282,
+            2140
+          ],
+          "response_sha256": "8f03f14f563286ac67e38ca5465040bc2096407dcf442a2d2320bd95be9237a2",
+          "status": 200,
+          "target": "/kbs/v0/attest"
+        },
+        {
+          "connection": "connection-000002",
+          "method": "GET",
+          "request_offsets": [
+            3608,
+            5412
+          ],
+          "request_sha256": "40002bd4d6c6893115f8f6fd93929051a7fc673322c836d570688438c1035b5d",
+          "response_offsets": [
+            394,
+            591
+          ],
+          "response_sha256": "50daaf66f03e126cadd94295f449a7b8ae27ff077fd00beca1a35c35c1e74e6a",
+          "status": 401,
+          "target": "/kbs/v0/resource/default/attestflow-v7/kek-a"
+        },
+        {
+          "connection": "connection-000005",
+          "method": "POST",
+          "request_offsets": [
+            0,
+            280
+          ],
+          "request_sha256": "bb2fa3c6b519c25ae670859d2b840f5dc710a6e9a3e6b1f43fc018d2253b6354",
+          "response_offsets": [
+            0,
+            282
+          ],
+          "response_sha256": "a0a61e0724f6f30957549fc76c9ca382d94d8798e3b3ca6a256f5d65405df1b2",
+          "status": 200,
+          "target": "/kbs/v0/auth"
+        },
+        {
+          "connection": "connection-000005",
+          "method": "POST",
+          "request_offsets": [
+            280,
+            912
+          ],
+          "request_sha256": "547dca2dc27414095b5d3a187203f5ae3d82f7f421537f44c0a5069060cbaf03",
+          "response_offsets": [
+            282,
+            2140
+          ],
+          "response_sha256": "978d2d882e0abd4a41c2bb3665a3e3c47d3e3374a8ab53459687da286720659d",
+          "status": 200,
+          "target": "/kbs/v0/attest"
+        }
+      ],
+      "last_http_monotonic_ns": 47124725915065,
+      "resource_gets": [
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "classification": "EXPLICIT_POLICY_DENY",
+          "connection": "connection-000002",
+          "cookie_absent": true,
+          "error_detail": "Access denied by policy",
+          "error_type": "https://github.com/confidential-containers/kbs/errors/PolicyDeny",
+          "http_status": 401,
+          "request_to_response_wall_interval_ns": [
+            1788849358133531121,
+            1788849358137448475
+          ],
+          "response_body_sha256": "4ec44745365ed1bed47e15518fa551d01d49bbf9e7a46e710a200b842faed96a",
+          "token_sha256": "ccff4287d9bdb2efd720119af8ae32b59bba0beffd2a2d1c6205dc3458bb9795"
+        },
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "classification": "EXPLICIT_POLICY_DENY",
+          "connection": "connection-000002",
+          "cookie_absent": true,
+          "error_detail": "Access denied by policy",
+          "error_type": "https://github.com/confidential-containers/kbs/errors/PolicyDeny",
+          "http_status": 401,
+          "request_to_response_wall_interval_ns": [
+            1788849358174569835,
+            1788849358176958082
+          ],
+          "response_body_sha256": "4ec44745365ed1bed47e15518fa551d01d49bbf9e7a46e710a200b842faed96a",
+          "token_sha256": "85b6550a99d8f67fe1615ed546eaf3a875171e4cd2482a2f1df9f24b22e61879"
+        },
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "classification": "EXPLICIT_POLICY_DENY",
+          "connection": "connection-000002",
+          "cookie_absent": true,
+          "error_detail": "Access denied by policy",
+          "error_type": "https://github.com/confidential-containers/kbs/errors/PolicyDeny",
+          "http_status": 401,
+          "request_to_response_wall_interval_ns": [
+            1788849358214498817,
+            1788849358218427637
+          ],
+          "response_body_sha256": "4ec44745365ed1bed47e15518fa551d01d49bbf9e7a46e710a200b842faed96a",
+          "token_sha256": "c1b946e401267f2f8a81b51598c9446c2afe7b84af010bb6fbe5c75fbc621ced"
+        }
+      ]
+    },
+    "output_length": null,
+    "output_sha256": null,
+    "reference_crypto_kind": "VALID",
+    "reference_lek_bytes_equal": null,
+    "rpc_request_sha256": "46bd971fa639a0b5751a9dc3ba7c1fcd1b9ef521ae67e646637aa0c6b4bf515f",
+    "rpc_response_sha256": "57c17ac2cac110f75b25750122a96a32ba022c19dcca3a6c2fd801efba617d5b",
+    "rpc_status_code": 13,
+    "rpc_status_message": "[CDH] [ERROR]: Decrypt Image (UnwrapKey) failed"
+  },
+  "ear_qualified": true,
+  "effect_qualified": true,
+  "native_cause": "ALL_ACTUAL_GETS_POLICY_DENIED_THEN_COMPLETED_RPC_ERROR",
+  "phi_output": true,
+  "psi_gcm_return_only": true,
+  "raw_qualified": true,
+  "reasons": [],
+  "scope": "DEVELOPMENT_CONTROL_CAPTURE",
+  "status": "RAW_QUALIFIED_CONTROL",
+  "successful_output": false
+}

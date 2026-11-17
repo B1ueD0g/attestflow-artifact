@@ -1,0 +1,2666 @@
+{
+  "acceptance_gates": {
+    "A_FULL_adds_information_over_strongest_baseline": false,
+    "A_FULL_strictly_better_detection_any_split": false,
+    "A_FULL_strictly_better_localization_macro_f1": false,
+    "boundary": "Development and contaminated held-out labels cannot establish confirmatory superiority even if a descriptive difference exists.",
+    "central_superiority_gate": "FAIL",
+    "detection_by_split": {
+      "development": {
+        "a_only": 0,
+        "baseline_only": 0,
+        "classification": "DEVELOPMENT_ONLY",
+        "strictly_better": false
+      },
+      "held_out": {
+        "a_only": 0,
+        "baseline_only": 0,
+        "classification": "CONTAMINATED_SAME_TEAM_NOT_CONFIRMATORY",
+        "strictly_better": false
+      },
+      "validation": {
+        "a_only": 0,
+        "baseline_only": 0,
+        "classification": "DEVELOPMENT_ONLY",
+        "strictly_better": false
+      }
+    },
+    "required_claim_action": "NARROW_OR_REJECT_CENTRAL_SUPERIORITY_CLAIM",
+    "selection_rule": "Fixed capability-envelope baseline: matched predicate input, effect-side observation, and non-AttestFlow generic trace localization. No outcome-dependent winner selection.",
+    "strongest_baseline": "B3_TRACE"
+  },
+  "analysis_version": "1.0.0",
+  "artifact_kind": "attestflow.controlled_synthetic_posthoc_analysis",
+  "claim_evidence_boundary": [
+    {
+      "boundary": "These are same-team synthetic cases; the original held_out label is contaminated and nonconfirmatory.",
+      "claim": "The frozen synthetic schedule was analyzed without silently dropping missing or indeterminate cells.",
+      "evidence": [
+        "#/universe_audit",
+        "#/detection"
+      ]
+    },
+    {
+      "boundary": "A failed gate narrows the claim; equality is not reported as superiority.",
+      "claim": "A_FULL's descriptive detection and localization were compared with the fixed strongest baseline and its ablations.",
+      "evidence": [
+        "#/detection",
+        "#/localization",
+        "#/acceptance_gates"
+      ]
+    },
+    {
+      "boundary": "Synthetic same-harness observation alone does not establish observer independence.",
+      "claim": "The effect-side ablation changed at least one synthetic conclusion if listed in the evidence.",
+      "evidence": [
+        "#/effect_oracle_ablation"
+      ]
+    }
+  ],
+  "detection": {
+    "development": {
+      "comparisons_to_A_FULL": {
+        "A_T": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 2,
+            "A_T:NOT_DETECTED": 2
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 4,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_T",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 4,
+          "n_eligible_defect_cases": 4,
+          "n_expected_schedule_rows": 12,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_T": "DETECTED",
+              "case_id": "syn-linear-drop-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_T": "DETECTED",
+              "case_id": "syn-linear-overwrite-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_T": "DETECTED",
+              "case_id": "syn-policy-failopen-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_T": "DETECTED",
+              "case_id": "syn-policy-miskey-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            },
+            "A_T": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "A_T": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "development"
+        },
+        "A_TE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 2,
+            "A_TE:NOT_DETECTED": 2
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 4,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_TE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 4,
+          "n_eligible_defect_cases": 4,
+          "n_expected_schedule_rows": 12,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_TE": "DETECTED",
+              "case_id": "syn-linear-drop-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TE": "DETECTED",
+              "case_id": "syn-linear-overwrite-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TE": "DETECTED",
+              "case_id": "syn-policy-failopen-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TE": "DETECTED",
+              "case_id": "syn-policy-miskey-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            },
+            "A_TE": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "A_TE": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "development"
+        },
+        "A_TR": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 2,
+            "A_TR:NOT_DETECTED": 2
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 4,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_TR",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 4,
+          "n_eligible_defect_cases": 4,
+          "n_expected_schedule_rows": 12,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_TR": "DETECTED",
+              "case_id": "syn-linear-drop-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TR": "DETECTED",
+              "case_id": "syn-linear-overwrite-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TR": "DETECTED",
+              "case_id": "syn-policy-failopen-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TR": "DETECTED",
+              "case_id": "syn-policy-miskey-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            },
+            "A_TR": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "A_TR": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "development"
+        },
+        "B0_NATIVE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 2,
+            "B0_NATIVE:NOT_DETECTED": 2
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 4,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B0_NATIVE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 4,
+          "n_eligible_defect_cases": 4,
+          "n_expected_schedule_rows": 12,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B0_NATIVE": "DETECTED",
+              "case_id": "syn-linear-drop-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B0_NATIVE": "DETECTED",
+              "case_id": "syn-linear-overwrite-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B0_NATIVE": "DETECTED",
+              "case_id": "syn-policy-failopen-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B0_NATIVE": "DETECTED",
+              "case_id": "syn-policy-miskey-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            },
+            "B0_NATIVE": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "B0_NATIVE": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "development"
+        },
+        "B1_GENERIC": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 2,
+            "B1_GENERIC:NOT_DETECTED": 2
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 4,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B1_GENERIC",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 4,
+          "n_eligible_defect_cases": 4,
+          "n_expected_schedule_rows": 12,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B1_GENERIC": "DETECTED",
+              "case_id": "syn-linear-drop-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B1_GENERIC": "DETECTED",
+              "case_id": "syn-linear-overwrite-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B1_GENERIC": "DETECTED",
+              "case_id": "syn-policy-failopen-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B1_GENERIC": "DETECTED",
+              "case_id": "syn-policy-miskey-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            },
+            "B1_GENERIC": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "B1_GENERIC": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "development"
+        },
+        "B2_MANUAL": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 2,
+            "B2_MANUAL:NOT_DETECTED": 2
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 4,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B2_MANUAL",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 4,
+          "n_eligible_defect_cases": 4,
+          "n_expected_schedule_rows": 12,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B2_MANUAL": "DETECTED",
+              "case_id": "syn-linear-drop-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B2_MANUAL": "DETECTED",
+              "case_id": "syn-linear-overwrite-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B2_MANUAL": "DETECTED",
+              "case_id": "syn-policy-failopen-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B2_MANUAL": "DETECTED",
+              "case_id": "syn-policy-miskey-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            },
+            "B2_MANUAL": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "B2_MANUAL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "development"
+        },
+        "B3_TRACE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 2,
+            "B3_TRACE:NOT_DETECTED": 2
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 4,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B3_TRACE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 4,
+          "n_eligible_defect_cases": 4,
+          "n_expected_schedule_rows": 12,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B3_TRACE": "DETECTED",
+              "case_id": "syn-linear-drop-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B3_TRACE": "DETECTED",
+              "case_id": "syn-linear-overwrite-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B3_TRACE": "DETECTED",
+              "case_id": "syn-policy-failopen-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B3_TRACE": "DETECTED",
+              "case_id": "syn-policy-miskey-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            },
+            "B3_TRACE": {
+              "detected": 4,
+              "determinate": 4,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.5101091635454028,
+                0.9999999999999999
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "B3_TRACE": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "development"
+        }
+      },
+      "evidence_classification": "DEVELOPMENT_ONLY",
+      "excluded_from_primary_detection_as_robustness_only": []
+    },
+    "held_out": {
+      "comparisons_to_A_FULL": {
+        "A_T": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_T:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 1,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_T",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 1,
+          "n_eligible_defect_cases": 1,
+          "n_expected_schedule_rows": 6,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 1,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_T": "DETECTED",
+              "case_id": "syn-dualpath-cross-request-swap-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            },
+            "A_T": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_T:NOT_DETECTED": 1
+          },
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            },
+            "A_T": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            }
+          },
+          "split": "held_out"
+        },
+        "A_TE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_TE:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 1,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_TE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 1,
+          "n_eligible_defect_cases": 1,
+          "n_expected_schedule_rows": 6,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 1,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_TE": "DETECTED",
+              "case_id": "syn-dualpath-cross-request-swap-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            },
+            "A_TE": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_TE:NOT_DETECTED": 1
+          },
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            },
+            "A_TE": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            }
+          },
+          "split": "held_out"
+        },
+        "A_TR": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_TR:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 1,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_TR",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 1,
+          "n_eligible_defect_cases": 1,
+          "n_expected_schedule_rows": 6,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 1,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_TR": "DETECTED",
+              "case_id": "syn-dualpath-cross-request-swap-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            },
+            "A_TR": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_TR:NOT_DETECTED": 1
+          },
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            },
+            "A_TR": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            }
+          },
+          "split": "held_out"
+        },
+        "B0_NATIVE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B0_NATIVE:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 1,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B0_NATIVE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 1,
+          "n_eligible_defect_cases": 1,
+          "n_expected_schedule_rows": 6,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 1,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B0_NATIVE": "DETECTED",
+              "case_id": "syn-dualpath-cross-request-swap-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            },
+            "B0_NATIVE": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B0_NATIVE:NOT_DETECTED": 1
+          },
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            },
+            "B0_NATIVE": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            }
+          },
+          "split": "held_out"
+        },
+        "B1_GENERIC": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B1_GENERIC:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 1,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B1_GENERIC",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 1,
+          "n_eligible_defect_cases": 1,
+          "n_expected_schedule_rows": 6,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 1,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B1_GENERIC": "DETECTED",
+              "case_id": "syn-dualpath-cross-request-swap-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            },
+            "B1_GENERIC": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B1_GENERIC:NOT_DETECTED": 1
+          },
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            },
+            "B1_GENERIC": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            }
+          },
+          "split": "held_out"
+        },
+        "B2_MANUAL": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B2_MANUAL:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 1,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B2_MANUAL",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 1,
+          "n_eligible_defect_cases": 1,
+          "n_expected_schedule_rows": 6,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 1,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B2_MANUAL": "DETECTED",
+              "case_id": "syn-dualpath-cross-request-swap-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            },
+            "B2_MANUAL": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B2_MANUAL:NOT_DETECTED": 1
+          },
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            },
+            "B2_MANUAL": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            }
+          },
+          "split": "held_out"
+        },
+        "B3_TRACE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B3_TRACE:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 1,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B3_TRACE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 1,
+          "n_eligible_defect_cases": 1,
+          "n_expected_schedule_rows": 6,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 1,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B3_TRACE": "DETECTED",
+              "case_id": "syn-dualpath-cross-request-swap-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            },
+            "B3_TRACE": {
+              "detected": 1,
+              "determinate": 1,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.2065493143772375,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B3_TRACE:NOT_DETECTED": 1
+          },
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            },
+            "B3_TRACE": {
+              "determinate": 1,
+              "estimate": 0.0,
+              "false_positives": 0,
+              "wilson_interval": [
+                0.0,
+                0.7934506856227624
+              ]
+            }
+          },
+          "split": "held_out"
+        }
+      },
+      "evidence_classification": "CONTAMINATED_SAME_TEAM_NOT_CONFIRMATORY",
+      "excluded_from_primary_detection_as_robustness_only": [
+        "syn-dualpath-trace-drop-001"
+      ]
+    },
+    "validation": {
+      "comparisons_to_A_FULL": {
+        "A_T": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_T:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 1,
+            "baseline_only": 0,
+            "both_detect": 2,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 1,
+            "b_only": 0,
+            "discordant_pairs": 1,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_T",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 3,
+          "n_eligible_defect_cases": 3,
+          "n_expected_schedule_rows": 8,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_T": "DETECTED",
+              "case_id": "syn-epoch-cache-replay-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_T": "NOT_DETECTED",
+              "case_id": "syn-epoch-release-before-decision-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_T": "DETECTED",
+              "case_id": "syn-epoch-stale-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.3333333333333333,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            },
+            "A_T": {
+              "detected": 2,
+              "determinate": 3,
+              "estimate": 0.6666666666666666,
+              "wilson_interval": [
+                0.20765960080204776,
+                0.9385080552796037
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "A_T": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "validation"
+        },
+        "A_TE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_TE:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 3,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_TE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 3,
+          "n_eligible_defect_cases": 3,
+          "n_expected_schedule_rows": 8,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_TE": "DETECTED",
+              "case_id": "syn-epoch-cache-replay-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TE": "DETECTED",
+              "case_id": "syn-epoch-release-before-decision-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TE": "DETECTED",
+              "case_id": "syn-epoch-stale-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            },
+            "A_TE": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "A_TE": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "validation"
+        },
+        "A_TR": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "A_TR:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 1,
+            "baseline_only": 0,
+            "both_detect": 2,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 1,
+            "b_only": 0,
+            "discordant_pairs": 1,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "A_TR",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 3,
+          "n_eligible_defect_cases": 3,
+          "n_expected_schedule_rows": 8,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "A_TR": "DETECTED",
+              "case_id": "syn-epoch-cache-replay-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TR": "NOT_DETECTED",
+              "case_id": "syn-epoch-release-before-decision-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "A_TR": "DETECTED",
+              "case_id": "syn-epoch-stale-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.3333333333333333,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            },
+            "A_TR": {
+              "detected": 2,
+              "determinate": 3,
+              "estimate": 0.6666666666666666,
+              "wilson_interval": [
+                0.20765960080204776,
+                0.9385080552796037
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "A_TR": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "validation"
+        },
+        "B0_NATIVE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B0_NATIVE:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 1,
+            "baseline_only": 0,
+            "both_detect": 2,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 1,
+            "b_only": 0,
+            "discordant_pairs": 1,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B0_NATIVE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 3,
+          "n_eligible_defect_cases": 3,
+          "n_expected_schedule_rows": 8,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B0_NATIVE": "DETECTED",
+              "case_id": "syn-epoch-cache-replay-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B0_NATIVE": "NOT_DETECTED",
+              "case_id": "syn-epoch-release-before-decision-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B0_NATIVE": "DETECTED",
+              "case_id": "syn-epoch-stale-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.3333333333333333,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            },
+            "B0_NATIVE": {
+              "detected": 2,
+              "determinate": 3,
+              "estimate": 0.6666666666666666,
+              "wilson_interval": [
+                0.20765960080204776,
+                0.9385080552796037
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "B0_NATIVE": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "validation"
+        },
+        "B1_GENERIC": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B1_GENERIC:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 3,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B1_GENERIC",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 3,
+          "n_eligible_defect_cases": 3,
+          "n_expected_schedule_rows": 8,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B1_GENERIC": "DETECTED",
+              "case_id": "syn-epoch-cache-replay-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B1_GENERIC": "DETECTED",
+              "case_id": "syn-epoch-release-before-decision-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B1_GENERIC": "DETECTED",
+              "case_id": "syn-epoch-stale-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            },
+            "B1_GENERIC": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "B1_GENERIC": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "validation"
+        },
+        "B2_MANUAL": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B2_MANUAL:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 3,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B2_MANUAL",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 3,
+          "n_eligible_defect_cases": 3,
+          "n_expected_schedule_rows": 8,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B2_MANUAL": "DETECTED",
+              "case_id": "syn-epoch-cache-replay-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B2_MANUAL": "DETECTED",
+              "case_id": "syn-epoch-release-before-decision-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B2_MANUAL": "DETECTED",
+              "case_id": "syn-epoch-stale-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            },
+            "B2_MANUAL": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "B2_MANUAL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "validation"
+        },
+        "B3_TRACE": {
+          "boundary": "The frozen registry/schedule is the left-join universe. Exact testing uses only complete determinate defect pairs; CLEAN and SPECIFICITY_CONTROL cases never enter defect recall or McNemar denominators and are reported separately. Missing, incomplete, indeterminate, and excluded cells remain visible.",
+          "clean_control_counts": {
+            "A_FULL:NOT_DETECTED": 1,
+            "B3_TRACE:NOT_DETECTED": 1
+          },
+          "counts": {
+            "a_only": 0,
+            "baseline_only": 0,
+            "both_detect": 3,
+            "indeterminate_pair": 0,
+            "neither": 0
+          },
+          "excluded_method_records": [],
+          "incomplete_result_records": [],
+          "independent_unit": "defect_case_id",
+          "mcnemar_complete_case": {
+            "a_only": 0,
+            "b_only": 0,
+            "discordant_pairs": 0,
+            "method": "exact_mcnemar_binomial_probability_ordering",
+            "p_value_two_sided_exact": 1.0
+          },
+          "method_a": "A_FULL",
+          "method_b": "B3_TRACE",
+          "missing_scheduled_results": [],
+          "n_complete_pairs": 3,
+          "n_eligible_defect_cases": 3,
+          "n_expected_schedule_rows": 8,
+          "n_incomplete_result_records": 0,
+          "n_missing_scheduled_results": 0,
+          "n_specificity_control_cases": 0,
+          "pair_details": [
+            {
+              "A_FULL": "DETECTED",
+              "B3_TRACE": "DETECTED",
+              "case_id": "syn-epoch-cache-replay-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B3_TRACE": "DETECTED",
+              "case_id": "syn-epoch-release-before-decision-001"
+            },
+            {
+              "A_FULL": "DETECTED",
+              "B3_TRACE": "DETECTED",
+              "case_id": "syn-epoch-stale-001"
+            }
+          ],
+          "paired_difference_complete_case": 0.0,
+          "paired_difference_sensitivity_bounds_all_eligible": [
+            0.0,
+            0.0
+          ],
+          "recall_determinate": {
+            "A_FULL": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            },
+            "B3_TRACE": {
+              "detected": 3,
+              "determinate": 3,
+              "estimate": 1.0,
+              "wilson_interval": [
+                0.4385029682449546,
+                1.0
+              ]
+            }
+          },
+          "specificity_boundary": "For frozen SPECIFICITY_CONTROL cases, DETECTED is counted as a false positive. Rates use determinate specificity outcomes only; INDETERMINATE outcomes remain in the outcome counts and outside that denominator.",
+          "specificity_control_counts": {},
+          "specificity_false_positive_determinate": {
+            "A_FULL": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            },
+            "B3_TRACE": {
+              "determinate": 0,
+              "estimate": null,
+              "false_positives": 0,
+              "wilson_interval": null
+            }
+          },
+          "split": "validation"
+        }
+      },
+      "evidence_classification": "DEVELOPMENT_ONLY",
+      "excluded_from_primary_detection_as_robustness_only": []
+    }
+  },
+  "effect_oracle_ablation": {
+    "boundary": "A conclusion change isolates effect-side information, but this synthetic fixture creates its observer inside the same harness; E4 independence requires the separately executed recorder evidence.",
+    "changes": [
+      {
+        "A_FULL": "FAIL",
+        "A_TR": "PASS",
+        "case_id": "syn-epoch-release-before-decision-001"
+      }
+    ],
+    "claim_status": "INCOMPLETE_SYNTHETIC_OBSERVER_NOT_PROCESS_INDEPENDENT",
+    "conclusion_change_count": 1,
+    "missing_pairs": []
+  },
+  "independent_unit": "defect_case_id",
+  "localization": {
+    "A_FULL": {
+      "case_metrics": [
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-dualpath-cross-request-swap-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 2,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-cache-replay-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-release-before-decision-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-stale-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-linear-drop-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-linear-overwrite-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-policy-failopen-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-policy-miskey-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        }
+      ],
+      "missing_case_ids": [],
+      "summary": {
+        "defect_case_ids": [
+          "syn-dualpath-cross-request-swap-001",
+          "syn-epoch-cache-replay-001",
+          "syn-epoch-release-before-decision-001",
+          "syn-epoch-stale-001",
+          "syn-linear-drop-001",
+          "syn-linear-overwrite-001",
+          "syn-policy-failopen-001",
+          "syn-policy-miskey-001"
+        ],
+        "exact_frontier_matches": 8,
+        "exact_frontier_rate_determinate": 1.0,
+        "independent_unit": "defect_case_id",
+        "macro_edge_f1": 1.0,
+        "macro_edge_precision": 1.0,
+        "macro_edge_recall": 1.0,
+        "mean_symmetric_line_graph_distance": 0.0,
+        "micro_edge_f1": 1.0,
+        "micro_edge_precision": 1.0,
+        "micro_edge_recall": 1.0,
+        "n_cases": 8,
+        "n_determinate": 8,
+        "n_indeterminate": 0,
+        "n_localized": 8,
+        "n_unlocated": 0,
+        "overconfidence_count": 0,
+        "overconfidence_rate_all_cases": 0.0
+      }
+    },
+    "A_TR": {
+      "case_metrics": [
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-dualpath-cross-request-swap-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 2,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-cache-replay-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-release-before-decision-001",
+          "edge_f1": 0.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 0.0,
+          "edge_recall": 0.0,
+          "exact_frontier_set_match": false,
+          "false_negative_edges": 1,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": null,
+          "true_positive_edges": 0,
+          "unlocated": true
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-stale-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-linear-drop-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-linear-overwrite-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-policy-failopen-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-policy-miskey-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        }
+      ],
+      "missing_case_ids": [],
+      "summary": {
+        "defect_case_ids": [
+          "syn-dualpath-cross-request-swap-001",
+          "syn-epoch-cache-replay-001",
+          "syn-epoch-release-before-decision-001",
+          "syn-epoch-stale-001",
+          "syn-linear-drop-001",
+          "syn-linear-overwrite-001",
+          "syn-policy-failopen-001",
+          "syn-policy-miskey-001"
+        ],
+        "exact_frontier_matches": 7,
+        "exact_frontier_rate_determinate": 0.875,
+        "independent_unit": "defect_case_id",
+        "macro_edge_f1": 0.875,
+        "macro_edge_precision": 0.875,
+        "macro_edge_recall": 0.875,
+        "mean_symmetric_line_graph_distance": 0.0,
+        "micro_edge_f1": 0.9411764705882353,
+        "micro_edge_precision": 1.0,
+        "micro_edge_recall": 0.8888888888888888,
+        "n_cases": 8,
+        "n_determinate": 8,
+        "n_indeterminate": 0,
+        "n_localized": 7,
+        "n_unlocated": 1,
+        "overconfidence_count": 0,
+        "overconfidence_rate_all_cases": 0.0
+      }
+    },
+    "B3_TRACE": {
+      "case_metrics": [
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-dualpath-cross-request-swap-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 2,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-cache-replay-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-release-before-decision-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-epoch-stale-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-linear-drop-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-linear-overwrite-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-policy-failopen-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        },
+        {
+          "boundary": "Distance is symmetric nearest-comparable-edge distance on the direction-respecting node-edge line graph; candidate frontier is not source-code root cause.",
+          "defect_case_id": "syn-policy-miskey-001",
+          "edge_f1": 1.0,
+          "edge_namespace": "node_id",
+          "edge_precision": 1.0,
+          "edge_recall": 1.0,
+          "exact_frontier_set_match": true,
+          "false_negative_edges": 0,
+          "false_positive_edges": 0,
+          "indeterminate": false,
+          "overconfident": false,
+          "symmetric_line_graph_distance": 0.0,
+          "true_positive_edges": 1,
+          "unlocated": false
+        }
+      ],
+      "missing_case_ids": [],
+      "summary": {
+        "defect_case_ids": [
+          "syn-dualpath-cross-request-swap-001",
+          "syn-epoch-cache-replay-001",
+          "syn-epoch-release-before-decision-001",
+          "syn-epoch-stale-001",
+          "syn-linear-drop-001",
+          "syn-linear-overwrite-001",
+          "syn-policy-failopen-001",
+          "syn-policy-miskey-001"
+        ],
+        "exact_frontier_matches": 8,
+        "exact_frontier_rate_determinate": 1.0,
+        "independent_unit": "defect_case_id",
+        "macro_edge_f1": 1.0,
+        "macro_edge_precision": 1.0,
+        "macro_edge_recall": 1.0,
+        "mean_symmetric_line_graph_distance": 0.0,
+        "micro_edge_f1": 1.0,
+        "micro_edge_precision": 1.0,
+        "micro_edge_recall": 1.0,
+        "n_cases": 8,
+        "n_determinate": 8,
+        "n_indeterminate": 0,
+        "n_localized": 8,
+        "n_unlocated": 0,
+        "overconfidence_count": 0,
+        "overconfidence_rate_all_cases": 0.0
+      }
+    }
+  },
+  "non_completion_states": [
+    "No confirmatory held-out superiority result exists.",
+    "No independent external replication exists.",
+    "No production or field inference is made."
+  ],
+  "prediction_then_truth_order_enforced": true,
+  "status": "COMPLETE_WITH_CLAIM_NARROWING",
+  "universe_audit": {
+    "boundary": "Missing scheduled rows remain explicit and are never synthesized as PASS.",
+    "case_accounting": {
+      "boundary": "Missing, failed, and excluded cases remain visible; no category is silently mapped to PASS.",
+      "case_details": [
+        {
+          "case_id": "syn-dualpath-clean-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-dualpath-cross-request-swap-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-dualpath-irrelevant-perturbation-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-dualpath-trace-drop-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "HAS_INDETERMINATE"
+        },
+        {
+          "case_id": "syn-epoch-cache-replay-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-epoch-clean-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-epoch-release-before-decision-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-epoch-stale-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-linear-clean-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-linear-drop-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-linear-overwrite-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-policy-clean-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-policy-failopen-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        },
+        {
+          "case_id": "syn-policy-miskey-001",
+          "exclusion": null,
+          "record_count": 8,
+          "status": "RECORDED_DETERMINATE"
+        }
+      ],
+      "exclusions_by_reason": {},
+      "frozen_case_count": 14,
+      "indeterminate_by_reason": {
+        "SYNTHETIC_PREFLIGHT_ONLY; arm=A_FULL; shared evidence gate: trace missing or ambiguous; positive trace missing nodes=['authorization_decision']; positive trace references a missing predecessor event; test trace missing nodes=['authorization_decision']; test trace references a missing predecessor event": 1,
+        "SYNTHETIC_PREFLIGHT_ONLY; arm=A_T; shared evidence gate: trace missing or ambiguous; positive trace missing nodes=['authorization_decision']; positive trace references a missing predecessor event; test trace missing nodes=['authorization_decision']; test trace references a missing predecessor event": 1,
+        "SYNTHETIC_PREFLIGHT_ONLY; arm=A_TE; shared evidence gate: trace missing or ambiguous; positive trace missing nodes=['authorization_decision']; positive trace references a missing predecessor event; test trace missing nodes=['authorization_decision']; test trace references a missing predecessor event": 1,
+        "SYNTHETIC_PREFLIGHT_ONLY; arm=A_TR; shared evidence gate: trace missing or ambiguous; positive trace missing nodes=['authorization_decision']; positive trace references a missing predecessor event; test trace missing nodes=['authorization_decision']; test trace references a missing predecessor event": 1,
+        "SYNTHETIC_PREFLIGHT_ONLY; arm=B0_NATIVE; shared evidence gate: trace missing or ambiguous; positive trace missing nodes=['authorization_decision']; positive trace references a missing predecessor event; test trace missing nodes=['authorization_decision']; test trace references a missing predecessor event": 1,
+        "SYNTHETIC_PREFLIGHT_ONLY; arm=B1_GENERIC; shared evidence gate: trace missing or ambiguous; positive trace missing nodes=['authorization_decision']; positive trace references a missing predecessor event; test trace missing nodes=['authorization_decision']; test trace references a missing predecessor event": 1,
+        "SYNTHETIC_PREFLIGHT_ONLY; arm=B2_MANUAL; shared evidence gate: trace missing or ambiguous; positive trace missing nodes=['authorization_decision']; positive trace references a missing predecessor event; test trace missing nodes=['authorization_decision']; test trace references a missing predecessor event": 1,
+        "SYNTHETIC_PREFLIGHT_ONLY; arm=B3_TRACE; shared evidence gate: trace missing or ambiguous; positive trace missing nodes=['authorization_decision']; positive trace references a missing predecessor event; test trace missing nodes=['authorization_decision']; test trace references a missing predecessor event": 1
+      },
+      "orphan_result_case_ids": [],
+      "status_counts": {
+        "HAS_INDETERMINATE": 1,
+        "RECORDED_DETERMINATE": 13
+      }
+    },
+    "duplicate_schedule_ids": [],
+    "expected_schedule_rows": 112,
+    "missing_schedule_ids": [],
+    "observed_schedule_rows": 112,
+    "schedule_complete": true,
+    "unexpected_schedule_ids": []
+  }
+}

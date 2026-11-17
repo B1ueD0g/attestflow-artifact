@@ -1,0 +1,22 @@
+{
+  "kbs": {
+    "path": "/app/bin/kbs",
+    "sha256": "ad14899a47fb42968c6cd400c17cd852312d60e056fb5989212f6ac4be59c8f7",
+    "size": 80268552
+  },
+  "ttrpc-aa": {
+    "path": "/app/bin/ttrpc-aa",
+    "sha256": "2a4962f582fad7161aed87ead1ae483e278f630cc27e0a4e5d6c51454076372e",
+    "size": 28502192
+  },
+  "ttrpc-cdh": {
+    "path": "/app/bin/ttrpc-cdh",
+    "sha256": "03a72d8091d735ac686f3010795341680a6dd79d3c367d71f3149c9ecbcc4c45",
+    "size": 62601160
+  },
+  "ttrpc-cdh-tool": {
+    "path": "/app/bin/ttrpc-cdh-tool",
+    "sha256": "9c1a7220aa9959cceaf7e9d3002f69ed9954a0c4bb2863ba5961a1be72c71035",
+    "size": 8070352
+  }
+}

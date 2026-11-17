@@ -1,0 +1,13 @@
+HTTP/1.1 401 Unauthorized
+content-length: 110
+date: Tue, 08 Sep 2026 06:35:57 GMT
+
+{"type":"https://github.com/confidential-containers/kbs/errors/PolicyDeny","detail":"Access denied by policy"}HTTP/1.1 401 Unauthorized
+content-length: 110
+date: Tue, 08 Sep 2026 06:35:57 GMT
+
+{"type":"https://github.com/confidential-containers/kbs/errors/PolicyDeny","detail":"Access denied by policy"}HTTP/1.1 401 Unauthorized
+content-length: 110
+date: Tue, 08 Sep 2026 06:35:57 GMT
+
+{"type":"https://github.com/confidential-containers/kbs/errors/PolicyDeny","detail":"Access denied by policy"}

@@ -1,0 +1,44 @@
+{
+  "argv": [
+    "/app/bin/ttrpc-cdh",
+    "-c",
+    "/app/output/formal-c05-001/config/cdh.toml"
+  ],
+  "capture_complete": true,
+  "cwd": "/app/output/formal-c05-001",
+  "ended_unix_ns": 1788849400608323368,
+  "env": {
+    "AA_KBC_PARAMS": "cc_kbc::http://127.0.0.1:8081",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "RUST_LOG": "info",
+    "TZ": "UTC"
+  },
+  "errors": [],
+  "name": "cdh",
+  "pid": 49,
+  "process_closed": true,
+  "returncode": 0,
+  "signals": [
+    {
+      "reason": "registered_child_cleanup",
+      "signal": "SIGINT",
+      "unix_ns": 1788849400600456939
+    }
+  ],
+  "started_unix_ns": 1788849400441742997,
+  "streams": {
+    "stderr": {
+      "bytes": 0,
+      "eof": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 2081,
+      "eof": true,
+      "sha256": "0a68755469a88ddc1af4efbf8f4efc52afd5b532683b60ec0ef7d45aecaf7d81"
+    }
+  },
+  "timed_out": false
+}

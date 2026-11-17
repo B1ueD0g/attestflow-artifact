@@ -1,0 +1,16 @@
+{
+  "complete": false,
+  "error": {
+    "message": "[Errno 111] Connection refused",
+    "type": "ConnectionRefusedError"
+  },
+  "host": "127.0.0.1",
+  "method": "GET",
+  "path": "/kbs/v0/resource-policy",
+  "port": 8082,
+  "received_unix_ns": 1788849386092590914,
+  "request_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_headers": [],
+  "response_status": null
+}

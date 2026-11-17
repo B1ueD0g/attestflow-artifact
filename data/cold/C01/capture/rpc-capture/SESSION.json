@@ -1,0 +1,14 @@
+{
+  "boundary": "inline dummy TCP observation; no application verdict",
+  "connect_timeout_seconds": 5.0,
+  "idle_timeout_seconds": 90.0,
+  "listen": "/tmp/attestflow-v7-rpc-11xv9qw3/front.sock",
+  "max_bytes_per_direction": 16777216,
+  "private_socket_dir": "/tmp/attestflow-v7-rpc-11xv9qw3",
+  "schema": "attestflow-loopback-relay-v1",
+  "scope": "dummy CDH RPC only; never AA GetToken",
+  "started_unix_ns": 1788849343548363247,
+  "state": "STARTED_NOT_COMPLETE",
+  "transport": "unix_cdh_rpc",
+  "upstream": "/tmp/attestflow-v7-rpc-11xv9qw3/back.sock"
+}

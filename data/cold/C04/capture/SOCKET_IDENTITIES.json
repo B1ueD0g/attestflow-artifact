@@ -1,0 +1,19 @@
+[
+  {
+    "device": 45,
+    "inode": 581123,
+    "observed_unix_ns": 1788849386382575639,
+    "path": "/run/confidential-containers/attestation-agent/attestation-agent.sock"
+  },
+  {
+    "device": 45,
+    "inode": 581131,
+    "observed_unix_ns": 1788849386448063899,
+    "path": "/tmp/attestflow-v7-rpc-mv4ppl4_/back.sock"
+  },
+  {
+    "device": 45,
+    "inode": 581134,
+    "path": "/tmp/attestflow-v7-rpc-mv4ppl4_/front.sock"
+  }
+]

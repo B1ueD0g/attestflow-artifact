@@ -1,0 +1,22 @@
+{
+  "aa_socket_absent": true,
+  "boundary": "No JWT claims read; trusted local setup, not root-resistant provenance or token verification.",
+  "cdh_config_socket": "unix:///tmp/attestflow-v7-rpc-r0ilbh1r/back.sock",
+  "interfaces": [
+    "lo"
+  ],
+  "native_output_dir": "/app/output/formal-c06-001",
+  "ports_free": [
+    8081,
+    8082
+  ],
+  "public_file_matches_private": true,
+  "public_pem_sha256_derived_from_configured_private": "bff53964592ca15afa22ce58a52f81b5f44d1a44737eab498d9174c607041643",
+  "recorded_native_pids_absent": {
+    "aa": 46,
+    "cdh": 49,
+    "client": 53,
+    "kbs": 37
+  },
+  "scope": "SEPARATE_LOCAL_POST_RUN_ORIGIN_CHECK"
+}

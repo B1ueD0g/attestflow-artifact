@@ -1,0 +1,43 @@
+{
+  "argv": [
+    "/app/bin/kbs",
+    "--config-file",
+    "/app/output/formal-c04-001/config/kbs.toml"
+  ],
+  "capture_complete": true,
+  "cwd": "/app/output/formal-c04-001",
+  "ended_unix_ns": 1788849386859299064,
+  "env": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "RUST_LOG": "info",
+    "TZ": "UTC"
+  },
+  "errors": [],
+  "name": "kbs",
+  "pid": 37,
+  "process_closed": true,
+  "returncode": 0,
+  "signals": [
+    {
+      "reason": "registered_child_cleanup",
+      "signal": "SIGTERM",
+      "unix_ns": 1788849386552314361
+    }
+  ],
+  "started_unix_ns": 1788849386081943125,
+  "streams": {
+    "stderr": {
+      "bytes": 0,
+      "eof": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 5680,
+      "eof": true,
+      "sha256": "2ecc4a184a62b43bfc0f8d7fa3afe52553e253aac0c670ed5cfe1b56ed172dac"
+    }
+  },
+  "timed_out": false
+}

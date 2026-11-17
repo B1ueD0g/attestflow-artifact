@@ -1,0 +1,22 @@
+[2m2026-09-08T06:36:12.189373Z[0m [32m INFO[0m [2mttrpc_cdh[0m[2m:[0m Welcome to Confidential Containers Confidential Data Hub (ttRPC version)!
+
+
+ _____                 __  _      _               _    _         _   ______        _            _   _         _     
+/  __ \               / _|(_)    | |             | |  (_)       | |  |  _  \      | |          | | | |       | |    
+| /  \/  ___   _ __  | |_  _   __| |  ___  _ __  | |_  _   __ _ | |  | | | | __ _ | |_  __ _   | |_| | _   _ | |__  
+| |     / _ \ | '_ \ |  _|| | / _` | / _ \| '_ \ | __|| | / _` || |  | | | |/ _` || __|/ _` |  |  _  || | | || '_ \ 
+| \__/\| (_) || | | || |  | || (_| ||  __/| | | || |_ | || (_| || |  | |/ /| (_| || |_| (_| |  | | | || |_| || |_) |
+ \____/ \___/ |_| |_||_|  |_| \__,_| \___||_| |_| \__||_| \__,_||_|  |___/  \__,_| \__|\__,_|  \_| |_/ \__,_||_.__/ 
+                                                                                                                                                                                         
+version: -
+resource providers: KBS
+kms plugins: 
+buildtime: 2026-09-08 04:23:37 +00:00
+loglevel: info
+rpc: ttrpc
+
+[2m2026-09-08T06:36:12.189557Z[0m [32m INFO[0m [2mttrpc_cdh[0m[2m:[0m Using config file: /app/output/formal-c03-001/config/cdh.toml
+[2m2026-09-08T06:36:12.190186Z[0m [33m WARN[0m [2mkms::plugins::kbs::cc_kbc[0m[2m:[0m KBS_CERT get failed: NotPresent. Use no KBS public key certs.
+[2m2026-09-08T06:36:12.198108Z[0m [32m INFO[0m [2mttrpc_cdh[0m[2m:[0m [ttRPC] Confidential Data Hub starts to listen to request: unix:///tmp/attestflow-v7-rpc-u8gtcti5/back.sock
+[2m2026-09-08T06:36:12.253390Z[0m [32m INFO[0m [2mconfidential_data_hub::hub[0m[2m:[0m unwrap key called
+[2m2026-09-08T06:36:12.337416Z[0m [32m INFO[0m [2mttrpc_cdh[0m[2m:[0m SIGINT received, gracefully shutdown.

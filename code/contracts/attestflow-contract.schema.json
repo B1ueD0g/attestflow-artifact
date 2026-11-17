@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/attestflow/contract.schema.json",
+  "title": "AttestFlow Binding Contract",
+  "description": "Research schema for defensive, local testing of cross-layer remote-attestation binding continuity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id",
+    "version",
+    "description",
+    "actual",
+    "expected",
+    "relation",
+    "observation_graph",
+    "protected_effect",
+    "effect_observer",
+    "test_domain",
+    "controls",
+    "trace_policy",
+    "failure_policy",
+    "security_boundary"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{2,127}$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 12
+    },
+    "actual": {
+      "$ref": "#/$defs/valueEndpoint"
+    },
+    "expected": {
+      "$ref": "#/$defs/valueEndpoint"
+    },
+    "relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operator", "failure_semantics"],
+      "properties": {
+        "operator": {
+          "enum": ["equal", "fresh", "authorized_by_policy", "same_decision"]
+        },
+        "failure_semantics": {
+          "const": "deny_effect"
+        }
+      }
+    },
+    "observation_graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "nodes",
+        "edges",
+        "order_semantics",
+        "retry_model",
+        "on_incomparable_minima"
+      ],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{1,63}$"
+              }
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "to"],
+            "properties": {
+              "from": {"type": "string"},
+              "to": {"type": "string"}
+            }
+          }
+        },
+        "order_semantics": {"const": "happens_before_dag_per_attempt"},
+        "retry_model": {"const": "separate_attempt_nodes"},
+        "on_incomparable_minima": {"const": "candidate_frontier"}
+      }
+    },
+    "protected_effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["effect_id", "kind", "resource_class"],
+      "properties": {
+        "effect_id": {"type": "string", "minLength": 3},
+        "kind": {
+          "enum": ["dummy_resource_release", "dummy_commit", "dummy_access"]
+        },
+        "resource_class": {"const": "synthetic"}
+      }
+    },
+    "effect_observer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "boundary_id",
+        "independent_of_sut_decision_log",
+        "append_only",
+        "uses_dummy_resource"
+      ],
+      "properties": {
+        "type": {"const": "local_effect_ledger"},
+        "boundary_id": {"type": "string"},
+        "independent_of_sut_decision_log": {"const": true},
+        "append_only": {"const": true},
+        "uses_dummy_resource": {"const": true}
+      }
+    },
+    "controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["positive", "negative_generation"],
+      "properties": {
+        "positive": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "expected_effect", "must_be_reachable"],
+          "properties": {
+            "name": {"type": "string"},
+            "expected_effect": {"const": true},
+            "must_be_reachable": {"const": true}
+          }
+        },
+        "negative_generation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["derived_from_relation", "one_axis_per_trial", "expected_effect"],
+          "properties": {
+            "derived_from_relation": {"const": true},
+            "one_axis_per_trial": {"const": true},
+            "expected_effect": {"const": false}
+          }
+        }
+      }
+    },
+    "test_domain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fixture_class",
+        "values_are_synthetic",
+        "distinct_contexts_min",
+        "deterministic_seed",
+        "compiler_derives_mutations"
+      ],
+      "properties": {
+        "fixture_class": {"const": "local_generated"},
+        "values_are_synthetic": {"const": true},
+        "distinct_contexts_min": {"type": "integer", "minimum": 2},
+        "deterministic_seed": {"type": "integer", "minimum": 0},
+        "compiler_derives_mutations": {"const": true}
+      }
+    },
+    "trace_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "commitment",
+        "log_raw_values",
+        "correlation_ids",
+        "event_causality",
+        "on_incomparable_minima",
+        "on_missing",
+        "on_ambiguous"
+      ],
+      "properties": {
+        "commitment": {"const": "hmac-sha256"},
+        "log_raw_values": {"const": false},
+        "correlation_ids": {
+          "type": "array",
+          "minItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": ["trial_id", "attempt_id", "event_id", "obligation_id", "request_id", "decision_id", "context_id", "effect_id", "policy_epoch"]
+          }
+        },
+        "event_causality": {"const": "predecessor_event_ids"},
+        "on_incomparable_minima": {"const": "candidate_frontier"},
+        "on_missing": {"const": "indeterminate"},
+        "on_ambiguous": {"const": "indeterminate"}
+      }
+    },
+    "failure_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relation_violation",
+        "positive_unreachable",
+        "missing_trace",
+        "observer_unavailable"
+      ],
+      "properties": {
+        "relation_violation": {"const": "deny"},
+        "positive_unreachable": {"const": "invalid_test"},
+        "missing_trace": {"const": "indeterminate"},
+        "observer_unavailable": {"const": "indeterminate"}
+      }
+    },
+    "security_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "execution",
+        "target_ownership",
+        "uses_real_secret",
+        "public_scanning",
+        "requires_undisclosed_vulnerability"
+      ],
+      "properties": {
+        "execution": {"const": "local_offline"},
+        "target_ownership": {"const": "researcher_controlled"},
+        "uses_real_secret": {"const": false},
+        "public_scanning": {"const": false},
+        "requires_undisclosed_vulnerability": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "valueEndpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic_path", "value_type", "boundary_id"],
+      "properties": {
+        "semantic_path": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{2,127}$"
+        },
+        "value_type": {
+          "enum": ["bytes", "identifier", "digest", "epoch", "decision"]
+        },
+        "boundary_id": {"type": "string"}
+      }
+    }
+  }
+}

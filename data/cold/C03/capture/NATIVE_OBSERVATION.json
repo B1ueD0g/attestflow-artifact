@@ -1,0 +1,17 @@
+{
+  "capture_complete": true,
+  "diagnostic": "actual complete success payload observed",
+  "kind": "SUCCESS_BYTES_OBSERVED",
+  "operation_id": "native-control-unwrap",
+  "output_bytes_base64": "jsgn/kTR/nfYmZFTtsTfqgI5wYLcC3KaoLWgV4z6DSM=",
+  "phi": null,
+  "process_closed": true,
+  "reply_json_base64": "eyJrZXl1bndyYXByZXN1bHRzIjp7Im9wdHNkYXRhIjpbMTQyLDIwMCwzOSwyNTQsNjgsMjA5LDI1NCwxMTksMjE2LDE1MywxNDUsODMsMTgyLDE5NiwyMjMsMTcwLDIsNTcsMTkzLDEzMCwyMjAsMTEsMTE0LDE1NCwxNjAsMTgxLDE2MCw4NywxNDAsMjUwLDEzLDM1XX19",
+  "returncode": 0,
+  "rpc_error_candidate": false,
+  "scope": "DEVELOPMENT_CONTROL_CAPTURE",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "3a41aa43d765ae87e196d8a8b4ad8fb8a21bdee77c2044eacf8daed0491d78f0",
+  "successful_output": true,
+  "target_comparison": "NOT_PERFORMED"
+}

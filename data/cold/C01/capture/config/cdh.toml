@@ -1,0 +1,13 @@
+socket = "unix:///tmp/attestflow-v7-rpc-11xv9qw3/back.sock"
+credentials = []
+skip_sealed_secret_verification = false
+
+[kbc]
+name = "cc_kbc"
+url = "http://127.0.0.1:8081"
+
+[image]
+work_dir = "/app/output/formal-c01-001/image-unused"
+
+[log]
+level = "info"

@@ -1,0 +1,11 @@
+{"event": "ACCEPTED", "monotonic_ns": 47152995916309}
+{"event": "UPSTREAM_CONNECTED", "monotonic_ns": 47152998924199, "peer": ["127.0.0.1", 8082]}
+{"direction": "client_to_upstream", "event": "CAPTURED", "monotonic_ns": 47153000839300, "offset": 0, "sha256": "0e65a4339bcc5f828f660a392ebcf69305c25606a02a974e4f8aae51639e0a6f", "size": 1792}
+{"direction": "client_to_upstream", "event": "WRITE_SUBMITTED", "monotonic_ns": 47153002677633, "offset": 0, "size": 1792}
+{"direction": "upstream_to_client", "event": "CAPTURED", "monotonic_ns": 47153006856289, "offset": 0, "sha256": "ecbcec35e79a5511b0ba24d678f025163a6f2a42cacdd9aab2f933544b35f87b", "size": 543}
+{"direction": "upstream_to_client", "event": "WRITE_SUBMITTED", "monotonic_ns": 47153007289803, "offset": 0, "size": 543}
+{"direction": "client_to_upstream", "event": "READ_EOF", "monotonic_ns": 47153016717857}
+{"direction": "client_to_upstream", "event": "WRITE_EOF_SUBMITTED", "monotonic_ns": 47153017162291}
+{"direction": "upstream_to_client", "event": "READ_EOF", "monotonic_ns": 47153017744506}
+{"direction": "upstream_to_client", "event": "WRITE_EOF_SUBMITTED", "monotonic_ns": 47153018070580}
+{"event": "BIDIRECTIONAL_EOF_OBSERVED", "monotonic_ns": 47153018398030}

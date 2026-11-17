@@ -1,0 +1,209 @@
+{
+  "boundary": "capture candidate only; nonzero client is not denial or no effect; no Phi/reference/EAR inference",
+  "cleanup": [
+    {
+      "path": "/tmp/attestflow-v7-rpc-r0ilbh1r/front.sock",
+      "status": "removed_own_socket"
+    },
+    {
+      "path": "/tmp/attestflow-v7-rpc-r0ilbh1r/back.sock",
+      "status": "removed_own_socket"
+    },
+    {
+      "path": "/run/confidential-containers/attestation-agent/attestation-agent.sock",
+      "status": "removed_own_socket"
+    },
+    {
+      "path": "/tmp/attestflow-v7-rpc-r0ilbh1r",
+      "status": "removed_own_empty_directory"
+    }
+  ],
+  "ended_unix_ns": 1788849415119727385,
+  "errors": [],
+  "final_ports": {
+    "available_at_check": true,
+    "ports": [
+      8081,
+      8082
+    ]
+  },
+  "observation_present": true,
+  "processes": {
+    "aa": {
+      "argv": [
+        "/app/bin/ttrpc-aa",
+        "--config-file",
+        "/app/output/formal-c06-001/config/aa.toml",
+        "--attestation_sock",
+        "unix:///run/confidential-containers/attestation-agent/attestation-agent.sock"
+      ],
+      "capture_complete": true,
+      "cwd": "/app/output/formal-c06-001",
+      "ended_unix_ns": 1788849414810864176,
+      "env": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "RUST_LOG": "info",
+        "TZ": "UTC"
+      },
+      "errors": [],
+      "name": "aa",
+      "pid": 46,
+      "process_closed": true,
+      "returncode": 0,
+      "signals": [
+        {
+          "reason": "registered_child_cleanup",
+          "signal": "SIGINT",
+          "unix_ns": 1788849414806815023
+        }
+      ],
+      "started_unix_ns": 1788849414623071046,
+      "streams": {
+        "stderr": {
+          "bytes": 0,
+          "eof": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 2609,
+          "eof": true,
+          "sha256": "12d69d74253aaf4fdfc4e24eae453c2cfa38ac0a4c16255e3e2e4e66923bc19e"
+        }
+      },
+      "timed_out": false
+    },
+    "cdh": {
+      "argv": [
+        "/app/bin/ttrpc-cdh",
+        "-c",
+        "/app/output/formal-c06-001/config/cdh.toml"
+      ],
+      "capture_complete": true,
+      "cwd": "/app/output/formal-c06-001",
+      "ended_unix_ns": 1788849414804764717,
+      "env": {
+        "AA_KBC_PARAMS": "cc_kbc::http://127.0.0.1:8081",
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "RUST_LOG": "info",
+        "TZ": "UTC"
+      },
+      "errors": [],
+      "name": "cdh",
+      "pid": 49,
+      "process_closed": true,
+      "returncode": 0,
+      "signals": [
+        {
+          "reason": "registered_child_cleanup",
+          "signal": "SIGINT",
+          "unix_ns": 1788849414798911943
+        }
+      ],
+      "started_unix_ns": 1788849414628862473,
+      "streams": {
+        "stderr": {
+          "bytes": 0,
+          "eof": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 1867,
+          "eof": true,
+          "sha256": "399251b0a8223659f74b75577221b1466a032560bc33c6bb47b2d68e927e7050"
+        }
+      },
+      "timed_out": false
+    },
+    "client": {
+      "argv": [
+        "/app/bin/ttrpc-cdh-tool",
+        "--socket",
+        "unix:///tmp/attestflow-v7-rpc-r0ilbh1r/front.sock",
+        "--timeout",
+        "50",
+        "unwrap-key",
+        "--annotation-path",
+        "/app/output/formal-c06-001/client/unwrap-input.json"
+      ],
+      "capture_complete": true,
+      "cwd": "/app/output/formal-c06-001",
+      "ended_unix_ns": 1788849414796925656,
+      "env": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "RUST_LOG": "info",
+        "TZ": "UTC"
+      },
+      "errors": [],
+      "name": "client",
+      "pid": 53,
+      "process_closed": true,
+      "returncode": 0,
+      "signals": [],
+      "started_unix_ns": 1788849414691022959,
+      "streams": {
+        "stderr": {
+          "bytes": 0,
+          "eof": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 201,
+          "eof": true,
+          "sha256": "4938ec0f31ccc89ef516e1fc9e2d78a8aa309380f02515b1c9f407e65586fdf5"
+        }
+      },
+      "timed_out": false
+    },
+    "kbs": {
+      "argv": [
+        "/app/bin/kbs",
+        "--config-file",
+        "/app/output/formal-c06-001/config/kbs.toml"
+      ],
+      "capture_complete": true,
+      "cwd": "/app/output/formal-c06-001",
+      "ended_unix_ns": 1788849415116630294,
+      "env": {
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "RUST_LOG": "info",
+        "TZ": "UTC"
+      },
+      "errors": [],
+      "name": "kbs",
+      "pid": 37,
+      "process_closed": true,
+      "returncode": 0,
+      "signals": [
+        {
+          "reason": "registered_child_cleanup",
+          "signal": "SIGTERM",
+          "unix_ns": 1788849414811439050
+        }
+      ],
+      "started_unix_ns": 1788849414565126187,
+      "streams": {
+        "stderr": {
+          "bytes": 0,
+          "eof": true,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 6014,
+          "eof": true,
+          "sha256": "ef965ceb0b88deb0a64e5c71add6d460eb04f879391b60d63f78a5d104c69269"
+        }
+      },
+      "timed_out": false
+    }
+  },
+  "scope": "DEVELOPMENT_CONTROL_CAPTURE",
+  "status": "CONTROL_CAPTURED_REQUIRES_INDEPENDENT_VALIDATION"
+}

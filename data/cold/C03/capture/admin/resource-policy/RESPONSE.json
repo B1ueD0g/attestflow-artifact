@@ -1,0 +1,26 @@
+{
+  "complete": true,
+  "error": null,
+  "host": "127.0.0.1",
+  "method": "POST",
+  "path": "/kbs/v0/resource-policy",
+  "port": 8082,
+  "received_unix_ns": 1788849372162199176,
+  "request_body_sha256": "d761b244661526607dd3ee49e1baeea4c788c42abe23dd84a3babd9fdc0115fe",
+  "response_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_headers": [
+    [
+      "content-length",
+      "0"
+    ],
+    [
+      "connection",
+      "close"
+    ],
+    [
+      "date",
+      "Tue, 08 Sep 2026 06:36:11 GMT"
+    ]
+  ],
+  "response_status": 200
+}

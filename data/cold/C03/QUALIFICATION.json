@@ -1,0 +1,116 @@
+{
+  "actual_contra": true,
+  "boundary": "Local constructed control; trust in launch/recorder/clocks/source is explicit. No other outlet, root-resistant proof, external replication, vulnerability or method advantage.",
+  "diagnostics": {
+    "http_chain": {
+      "actual_contra": true,
+      "actual_cpu_ear_statuses": [
+        "contraindicated"
+      ],
+      "all_get_count": 1,
+      "all_gets_explicit_policy_deny": false,
+      "any_resource_http_200": true,
+      "boundary": "Signed EAR associated with every actual GET; HTTP 200 alone establishes neither JWE structure nor direct KEK plaintext observation.",
+      "first_http_monotonic_ns": 47138757234764,
+      "handshakes": [
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "attest_response_wall_interval_ns": [
+            1788849372317457844,
+            1788849372317458385
+          ],
+          "connection": "connection-000001",
+          "token_sha256": "7fe72c00772848c11a2467c812135f102258d579b58afeb8a4a4ba75051c35e3",
+          "used_by_resource_get": true
+        }
+      ],
+      "http_exchange_count": 3,
+      "http_messages": [
+        {
+          "connection": "connection-000001",
+          "method": "POST",
+          "request_offsets": [
+            0,
+            280
+          ],
+          "request_sha256": "bb2fa3c6b519c25ae670859d2b840f5dc710a6e9a3e6b1f43fc018d2253b6354",
+          "response_offsets": [
+            0,
+            282
+          ],
+          "response_sha256": "7451b67ada204d3f02d16ff7d4353e1a6e96964bcced3d3f130f81f031c3074e",
+          "status": 200,
+          "target": "/kbs/v0/auth"
+        },
+        {
+          "connection": "connection-000001",
+          "method": "POST",
+          "request_offsets": [
+            280,
+            912
+          ],
+          "request_sha256": "5b44895b36dc8d50ed08080e9c4eec3c74eaf0a0edaf3a164e83cf43f22a877a",
+          "response_offsets": [
+            282,
+            2140
+          ],
+          "response_sha256": "21e0b4bf8358f3f7223704ae858e554046a0f790460dd0fe7c59e4ea759cdf55",
+          "status": 200,
+          "target": "/kbs/v0/attest"
+        },
+        {
+          "connection": "connection-000002",
+          "method": "GET",
+          "request_offsets": [
+            0,
+            1804
+          ],
+          "request_sha256": "6da65eb390bb2e7a14849c7609f1f0f6f643d34bb73be3a8d55a0566682bf0b0",
+          "response_offsets": [
+            0,
+            543
+          ],
+          "response_sha256": "4cc5d2b5cf01378be7ee5ec18c9fe44771ac75004870f7b80acaf3fe2d335f6d",
+          "status": 200,
+          "target": "/kbs/v0/resource/default/attestflow-v7/kek-a"
+        }
+      ],
+      "last_http_monotonic_ns": 47138805450062,
+      "resource_gets": [
+        {
+          "actual_cpu_ear_status": "contraindicated",
+          "classification": "HTTP_200_RESOURCE_RESPONSE",
+          "connection": "connection-000002",
+          "cookie_absent": true,
+          "error_detail": null,
+          "error_type": null,
+          "http_status": 200,
+          "request_to_response_wall_interval_ns": [
+            1788849372327373249,
+            1788849372332363265
+          ],
+          "response_body_sha256": "1692d78ea6cfdb9c5894d81ed16fe0a07cc73671a34f1976ae2f7743a1a91500",
+          "token_sha256": "7fe72c00772848c11a2467c812135f102258d579b58afeb8a4a4ba75051c35e3"
+        }
+      ]
+    },
+    "output_length": 32,
+    "output_sha256": "de4398e6def14429f50b6771edb3272282925aabe251003b5d37e5a2e716ad93",
+    "reference_crypto_kind": "VALID",
+    "reference_lek_bytes_equal": true,
+    "rpc_request_sha256": "28de16cff18d91a58752a89b0cc7571ba01bf4f2db3291976cef2e8b68357551",
+    "rpc_response_sha256": "6ceb269382bcb19d3e1835b9c190da2a8e91a9c5943af15b7ee8a38d856d3142",
+    "rpc_status_code": 0,
+    "rpc_status_message": ""
+  },
+  "ear_qualified": true,
+  "effect_qualified": true,
+  "native_cause": "SUCCESSFUL_RPC_RETURN",
+  "phi_output": false,
+  "psi_gcm_return_only": true,
+  "raw_qualified": true,
+  "reasons": [],
+  "scope": "DEVELOPMENT_CONTROL_CAPTURE",
+  "status": "RAW_QUALIFIED_CONTROL",
+  "successful_output": true
+}

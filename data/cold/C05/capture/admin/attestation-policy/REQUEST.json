@@ -1,0 +1,8 @@
+{
+  "admin_auth": "explicit InsecureAllowAll inside network-none dummy container",
+  "body_sha256": "51889f30c6feca86d3bc8b0000aaa4626eb4283dc8bf53a5643eff03051d2d03",
+  "content_type": "application/json",
+  "method": "POST",
+  "sent_unix_ns": 1788849400370059039,
+  "url": "http://127.0.0.1:8082/kbs/v0/attestation-policy"
+}

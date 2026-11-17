@@ -1,0 +1,6 @@
+HTTP/1.1 200 OK
+content-length: 434
+content-type: application/json
+date: Tue, 08 Sep 2026 06:36:54 GMT
+
+{"protected":"eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsiY3J2IjoiUC0yNTYiLCJrdHkiOiJFQyIsIngiOiJhZ1VFeERIc3M3Q2NJeHNZSEJnRkpma1FreFBORlpVUVJyWUM5c0E4Y0xvIiwieSI6IlpJTmU0UXp4XzJmbTEydnk1WkdiaFJFYnBfS2s4ZDhFMzdGaEtWR2JnUEEifX0","encrypted_key":"meqWcUI56gvzpBYf16dQsgMvvUt1Vc4W8O-lCxVUz87wCqHmQzhXTQ","iv":"q-Wy-JyC6tjPNElH","ciphertext":"IK6950oUwrkU_uNvrXtDECbcLPSyRW7NYSAQoDcmdLI","tag":"c7fyMmYXKmErXB6g6IshsA"}

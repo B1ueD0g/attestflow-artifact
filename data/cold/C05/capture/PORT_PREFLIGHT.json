@@ -1,0 +1,7 @@
+{
+  "available_at_check": true,
+  "ports": [
+    8081,
+    8082
+  ]
+}

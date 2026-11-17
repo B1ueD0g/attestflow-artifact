@@ -1,0 +1,8 @@
+{
+  "admin_auth": "explicit InsecureAllowAll inside network-none dummy container",
+  "body_sha256": "ab43cb7083085d805e5fbaa17765bde09309cd982775b58274b5cf1d20ca7929",
+  "content_type": "application/octet-stream",
+  "method": "POST",
+  "sent_unix_ns": 1788849400376929921,
+  "url": "http://127.0.0.1:8082/kbs/v0/resource/default/attestflow-v7/kek-a"
+}

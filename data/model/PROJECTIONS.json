@@ -1,0 +1,842 @@
+[
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J0",
+    "case_id": "C01",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "8627a52f17972300b99b2237d038458839133372fe4c799f7d790c29a05b4c61",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J1",
+    "case_id": "C01",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "8627a52f17972300b99b2237d038458839133372fe4c799f7d790c29a05b4c61",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J2",
+    "case_id": "C01",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "8627a52f17972300b99b2237d038458839133372fe4c799f7d790c29a05b4c61",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J3",
+    "case_id": "C01",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": true,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "8627a52f17972300b99b2237d038458839133372fe4c799f7d790c29a05b4c61",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J0",
+    "case_id": "C02",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "03c2cc21b3c08e903043bcd1165a954438e8eb6a3168b6551acc936a755c0f35",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J1",
+    "case_id": "C02",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "03c2cc21b3c08e903043bcd1165a954438e8eb6a3168b6551acc936a755c0f35",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J2",
+    "case_id": "C02",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "03c2cc21b3c08e903043bcd1165a954438e8eb6a3168b6551acc936a755c0f35",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J3",
+    "case_id": "C02",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": false,
+      "budget": "J3",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "03c2cc21b3c08e903043bcd1165a954438e8eb6a3168b6551acc936a755c0f35",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J0",
+    "case_id": "C03",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": false,
+    "qualification_sha256": "dd63ae99370d1f9bfb81d60525c871dfa8acc2e2161f412be1bc29ee5737d4e6",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J1",
+    "case_id": "C03",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": false,
+    "qualification_sha256": "dd63ae99370d1f9bfb81d60525c871dfa8acc2e2161f412be1bc29ee5737d4e6",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J2",
+    "case_id": "C03",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": false,
+    "qualification_sha256": "dd63ae99370d1f9bfb81d60525c871dfa8acc2e2161f412be1bc29ee5737d4e6",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J3",
+    "case_id": "C03",
+    "direct": {
+      "verdict": "FALSE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "FALSE"
+    },
+    "observation": {
+      "R": true,
+      "budget": "J3",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": false,
+    "qualification_sha256": "dd63ae99370d1f9bfb81d60525c871dfa8acc2e2161f412be1bc29ee5737d4e6",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J0",
+    "case_id": "C04",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "dd320e1c4ffde238b5d84f0b741abeede6c630c60835bd25f48b467c97234de2",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J1",
+    "case_id": "C04",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "dd320e1c4ffde238b5d84f0b741abeede6c630c60835bd25f48b467c97234de2",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J2",
+    "case_id": "C04",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "dd320e1c4ffde238b5d84f0b741abeede6c630c60835bd25f48b467c97234de2",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J3",
+    "case_id": "C04",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": false,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "dd320e1c4ffde238b5d84f0b741abeede6c630c60835bd25f48b467c97234de2",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J0",
+    "case_id": "C05",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "1743509317d635550259476d190c2f55f7670c587176ecbfe856c8a12ca692c2",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J1",
+    "case_id": "C05",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "1743509317d635550259476d190c2f55f7670c587176ecbfe856c8a12ca692c2",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J2",
+    "case_id": "C05",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "1743509317d635550259476d190c2f55f7670c587176ecbfe856c8a12ca692c2",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J3",
+    "case_id": "C05",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": false,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "1743509317d635550259476d190c2f55f7670c587176ecbfe856c8a12ca692c2",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J0",
+    "case_id": "C06",
+    "direct": {
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "verdict": "UNKNOWN"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "2874b999949196b6db91caaa7537ad08c3401c3559f6195b8e1eefe715b24b28",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J1",
+    "case_id": "C06",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "2874b999949196b6db91caaa7537ad08c3401c3559f6195b8e1eefe715b24b28",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J2",
+    "case_id": "C06",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "2874b999949196b6db91caaa7537ad08c3401c3559f6195b8e1eefe715b24b28",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  },
+  {
+    "boundary": "Partial fact projection, not a claim that the full native observation budget was collected.",
+    "budget": "J3",
+    "case_id": "C06",
+    "direct": {
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "verdict": "TRUE"
+    },
+    "observation": {
+      "R": true,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "phi_from_full_admitted_facts": true,
+    "qualification_sha256": "2874b999949196b6db91caaa7537ad08c3401c3559f6195b8e1eefe715b24b28",
+    "raw_qualified": true,
+    "source_status": "ADMITTED_RAW"
+  }
+]

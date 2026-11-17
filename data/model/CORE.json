@@ -1,0 +1,626 @@
+[
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "row_id": "core-J0-01",
+    "status": "PASS",
+    "truth": {
+      "R": false,
+      "c": false,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "row_id": "core-J0-02",
+    "status": "PASS",
+    "truth": {
+      "R": true,
+      "c": false,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "row_id": "core-J0-03",
+    "status": "PASS",
+    "truth": {
+      "R": false,
+      "c": true,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J0",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "row_id": "core-J0-04",
+    "status": "PASS",
+    "truth": {
+      "R": true,
+      "c": true,
+      "phi_output": false
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "row_id": "core-J1-01",
+    "status": "PASS",
+    "truth": {
+      "R": false,
+      "c": false,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "row_id": "core-J1-02",
+    "status": "PASS",
+    "truth": {
+      "R": true,
+      "c": false,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "row_id": "core-J1-03",
+    "status": "PASS",
+    "truth": {
+      "R": false,
+      "c": true,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J1",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": null
+    },
+    "row_id": "core-J1-04",
+    "status": "PASS",
+    "truth": {
+      "R": true,
+      "c": true,
+      "phi_output": false
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "core-J2-01",
+    "status": "PASS",
+    "truth": {
+      "R": false,
+      "c": false,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "core-J2-02",
+    "status": "PASS",
+    "truth": {
+      "R": true,
+      "c": false,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "core-J2-03",
+    "status": "PASS",
+    "truth": {
+      "R": false,
+      "c": true,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": null,
+      "budget": "J2",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "core-J2-04",
+    "status": "PASS",
+    "truth": {
+      "R": true,
+      "c": true,
+      "phi_output": false
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": false,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "core-J3-01",
+    "status": "PASS",
+    "truth": {
+      "R": false,
+      "c": false,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": true,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "core-J3-02",
+    "status": "PASS",
+    "truth": {
+      "R": true,
+      "c": false,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": false,
+      "budget": "J3",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "core-J3-03",
+    "status": "PASS",
+    "truth": {
+      "R": false,
+      "c": true,
+      "phi_output": true
+    }
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "FALSE"
+    },
+    "disagreement": false,
+    "expected": "FALSE",
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "FALSE"
+    },
+    "matrix": "CORE",
+    "observation": {
+      "R": true,
+      "budget": "J3",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "core-J3-04",
+    "status": "PASS",
+    "truth": {
+      "R": true,
+      "c": true,
+      "phi_output": false
+    }
+  }
+]

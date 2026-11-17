@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/app/bin/ttrpc-aa",
+    "--config-file",
+    "/app/output/formal-c05-001/config/aa.toml",
+    "--attestation_sock",
+    "unix:///run/confidential-containers/attestation-agent/attestation-agent.sock"
+  ],
+  "capture_complete": false,
+  "cwd": "/app/output/formal-c05-001",
+  "env": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "RUST_LOG": "info",
+    "TZ": "UTC"
+  },
+  "errors": [],
+  "name": "aa",
+  "pid": null,
+  "process_closed": false,
+  "returncode": null,
+  "signals": [],
+  "started_unix_ns": 1788849400387237671,
+  "streams": {},
+  "timed_out": false
+}

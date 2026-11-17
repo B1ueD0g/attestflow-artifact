@@ -1,0 +1,116 @@
+{
+  "actual_contra": false,
+  "boundary": "Local constructed control; trust in launch/recorder/clocks/source is explicit. No other outlet, root-resistant proof, external replication, vulnerability or method advantage.",
+  "diagnostics": {
+    "http_chain": {
+      "actual_contra": false,
+      "actual_cpu_ear_statuses": [
+        "warning"
+      ],
+      "all_get_count": 1,
+      "all_gets_explicit_policy_deny": false,
+      "any_resource_http_200": true,
+      "boundary": "Signed EAR associated with every actual GET; HTTP 200 alone establishes neither JWE structure nor direct KEK plaintext observation.",
+      "first_http_monotonic_ns": 47152959507265,
+      "handshakes": [
+        {
+          "actual_cpu_ear_status": "warning",
+          "attest_response_wall_interval_ns": [
+            1788849386519104000,
+            1788849386519104584
+          ],
+          "connection": "connection-000001",
+          "token_sha256": "d8962c4dddef64ccecd3e6aa72bb6e83cf37a6582e669baeb2ff883376929e83",
+          "used_by_resource_get": true
+        }
+      ],
+      "http_exchange_count": 3,
+      "http_messages": [
+        {
+          "connection": "connection-000001",
+          "method": "POST",
+          "request_offsets": [
+            0,
+            280
+          ],
+          "request_sha256": "bb2fa3c6b519c25ae670859d2b840f5dc710a6e9a3e6b1f43fc018d2253b6354",
+          "response_offsets": [
+            0,
+            282
+          ],
+          "response_sha256": "cc7372403970221ec5cc68615aa070fec4b7018d9c22f99e20d7decd0ba39daf",
+          "status": 200,
+          "target": "/kbs/v0/auth"
+        },
+        {
+          "connection": "connection-000001",
+          "method": "POST",
+          "request_offsets": [
+            280,
+            912
+          ],
+          "request_sha256": "9467b7f664affb65e267c68c33b06f3026b8a6ade6ff3cf39abbfd33afbae9a7",
+          "response_offsets": [
+            282,
+            2128
+          ],
+          "response_sha256": "4af4e56fdbff6aed6ff0910b2e041e5d3749677f4891c324cb072c78d2e68ada",
+          "status": 200,
+          "target": "/kbs/v0/attest"
+        },
+        {
+          "connection": "connection-000002",
+          "method": "GET",
+          "request_offsets": [
+            0,
+            1792
+          ],
+          "request_sha256": "0e65a4339bcc5f828f660a392ebcf69305c25606a02a974e4f8aae51639e0a6f",
+          "response_offsets": [
+            0,
+            543
+          ],
+          "response_sha256": "ecbcec35e79a5511b0ba24d678f025163a6f2a42cacdd9aab2f933544b35f87b",
+          "status": 200,
+          "target": "/kbs/v0/resource/default/attestflow-v7/kek-a"
+        }
+      ],
+      "last_http_monotonic_ns": 47153006856289,
+      "resource_gets": [
+        {
+          "actual_cpu_ear_status": "warning",
+          "classification": "HTTP_200_RESOURCE_RESPONSE",
+          "connection": "connection-000002",
+          "cookie_absent": true,
+          "error_detail": null,
+          "error_type": null,
+          "http_status": 200,
+          "request_to_response_wall_interval_ns": [
+            1788849386527752294,
+            1788849386533769449
+          ],
+          "response_body_sha256": "5b72bb0ccce1b9d21fdddfa5bbf7c1c6ca597cda3c3614ab0d8ddf89110f3eea",
+          "token_sha256": "d8962c4dddef64ccecd3e6aa72bb6e83cf37a6582e669baeb2ff883376929e83"
+        }
+      ]
+    },
+    "output_length": null,
+    "output_sha256": null,
+    "reference_crypto_kind": "AUTHENTICATION_FAILURE",
+    "reference_lek_bytes_equal": null,
+    "rpc_request_sha256": "bc05f7711d849df6d5809f08773498442710601d077df3d194dfc1bbd8adf6fe",
+    "rpc_response_sha256": "57c17ac2cac110f75b25750122a96a32ba022c19dcca3a6c2fd801efba617d5b",
+    "rpc_status_code": 13,
+    "rpc_status_message": "[CDH] [ERROR]: Decrypt Image (UnwrapKey) failed"
+  },
+  "ear_qualified": true,
+  "effect_qualified": true,
+  "native_cause": "NATIVE_DECRYPT_FAILURE_WITH_REFERENCE_AUTHENTICATION_FAILURE",
+  "phi_output": true,
+  "psi_gcm_return_only": true,
+  "raw_qualified": true,
+  "reasons": [],
+  "scope": "DEVELOPMENT_CONTROL_CAPTURE",
+  "status": "RAW_QUALIFIED_CONTROL",
+  "successful_output": false
+}

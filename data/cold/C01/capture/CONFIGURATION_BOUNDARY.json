@@ -1,0 +1,16 @@
+{
+  "active_resource_policy": "check-contra",
+  "active_resource_policy_sha256": "97833a0555e22fcf4e5b5294109005cfd27be6b8a18ee36aef2d75666c16cde6",
+  "admin": "InsecureAllowAll",
+  "as_policy_sha256": "9d77cee9779915c047859f8d2133572e3c58e5e43c7a065b083ed496cac8e111",
+  "boundary": "configuration intervention, not token status or application truth",
+  "http": "plaintext loopback only",
+  "observed_ear": null,
+  "reference_resource_policy_sha256": "97833a0555e22fcf4e5b5294109005cfd27be6b8a18ee36aef2d75666c16cde6",
+  "rv_svn_values": [
+    "1"
+  ],
+  "scope": "DEVELOPMENT_CONTROL_CAPTURE",
+  "signer_public_spki_sha256": "d39ee38d374781ca97e8e837c69337af58f81500a8d54c4bb328d7ed6684df33",
+  "token_trust": "insecure_header_jwk=true; public configured signer separately retained"
+}

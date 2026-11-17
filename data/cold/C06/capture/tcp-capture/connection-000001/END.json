@@ -1,0 +1,33 @@
+{
+  "capture_complete": true,
+  "client_peer": [
+    "127.0.0.1",
+    36400
+  ],
+  "connection_id": "connection-000001",
+  "directions": {
+    "client_to_upstream": {
+      "captured_file_bytes": 912,
+      "captured_file_sha256": "3409262ff254942b70d286f55ef0df99c919c7aabac6f9a5e0a5ba0a09c913d8",
+      "eof_observed": true,
+      "read_bytes": 912,
+      "submitted_bytes": 912,
+      "write_eof_submitted": true
+    },
+    "upstream_to_client": {
+      "captured_file_bytes": 2128,
+      "captured_file_sha256": "713eab4b0e15af2c7d1050baf1f4e442726de747cc2ecee81dab1d25989030d3",
+      "eof_observed": true,
+      "read_bytes": 2128,
+      "submitted_bytes": 2128,
+      "write_eof_submitted": true
+    }
+  },
+  "ended_unix_ns": 1788849414787426452,
+  "errors": [],
+  "started_unix_ns": 1788849414734306356,
+  "upstream_peer": [
+    "127.0.0.1",
+    8082
+  ]
+}

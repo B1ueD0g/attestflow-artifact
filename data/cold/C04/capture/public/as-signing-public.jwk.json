@@ -1,0 +1,8 @@
+{
+  "alg": "ES256",
+  "crv": "P-256",
+  "kty": "EC",
+  "use": "sig",
+  "x": "PsVvnbsTeU1IVSZrCpMRmNNHSDXq7SCChurr835hIXI",
+  "y": "ZAJVWYAU4LOdrIXs2M9Epd8vuzld79xcaqYGY9JxE8M"
+}

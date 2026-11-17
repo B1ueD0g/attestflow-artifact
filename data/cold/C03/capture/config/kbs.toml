@@ -1,0 +1,34 @@
+[http_server]
+sockets = ["127.0.0.1:8082"]
+insecure_http = true
+worker_count = 2
+
+[attestation_token]
+insecure_header_jwk = true
+
+[attestation_service]
+type = "coco_as_builtin"
+timeout = 5
+
+[attestation_service.rvps_config]
+type = "BuiltIn"
+
+[attestation_service.attestation_token_broker]
+duration_min = 5
+verbose_token = true
+
+[attestation_service.attestation_token_broker.signer]
+key_path = "/app/output/formal-c03-001/private/as-signing-key.pem"
+
+[admin]
+authorization_mode = "InsecureAllowAll"
+
+[storage_backend]
+storage_type = "LocalFs"
+
+[storage_backend.backends.local_fs]
+dir_path = "/app/output/formal-c03-001/kbs-storage"
+
+[[plugins]]
+name = "resource"
+storage_backend_type = "kvstorage"

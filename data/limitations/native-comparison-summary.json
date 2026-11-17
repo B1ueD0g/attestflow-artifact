@@ -1,0 +1,1735 @@
+{
+  "boundary": "Original method APIs on one shared converted observation; not original ArmExecutor/simulator execution. Epoch/correlation fields and effect sequence offset are declared representation scopes, not native AS claims. Physical state/closure rechecked locally; native capture semantics require the outer coordinator's qualification. Same-team trusted-local provenance, not malicious-host authentication, external replication, or method superiority.",
+  "counts": {
+    "fixture_simulator_executions": 0,
+    "gate_admitted_arm_calls": 12,
+    "new_consumer_runs": 0,
+    "new_native_calls": 0,
+    "observations_qualified": 8,
+    "observations_received": 8,
+    "original_arm_calls": 12,
+    "original_function_entries": {
+      "AFullArm.analyze": 6,
+      "B3TraceArm.analyze": 6,
+      "CoreObservationAnalyzer.analyze_pair": 6,
+      "CoreObservationAnalyzer.prepare_fixture_inputs": 6,
+      "arms.inspect_evidence": 6,
+      "oracle.evaluate_trial": 12,
+      "trace.localize_minimal_loss": 6
+    },
+    "pairs": 6,
+    "raw_arm_calls_returned": 12,
+    "raw_arm_exceptions": 0
+  },
+  "evidence_scope": "NATIVE_RECORD",
+  "pairs": [
+    {
+      "application_id": "application-1",
+      "arms": {
+        "A_FULL": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "A_FULL",
+            "boundary": "Full generated-test, typed-trace, and independent-effect pipeline.",
+            "detector": "attestflow_effect_grounded_oracle",
+            "input_source": "attestflow_contract_compiler",
+            "localizer": "typed_attestflow_trace_frontier",
+            "uses_contract_compiler": true,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:actual; core-positive=PASS; core-test=PASS; core-localization-probe=NO_PROHIBITED_EFFECT; relation violation did not produce the prohibited effect",
+              "verdict": "PASS"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:actual; core-positive=PASS; core-test=PASS; core-localization-probe=NO_PROHIBITED_EFFECT; relation violation did not produce the prohibited effect",
+              "verdict": "PASS"
+            }
+          }
+        },
+        "B3_TRACE": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "B3_TRACE",
+            "boundary": "Generic trace differencing uses the same graph endpoints but not the AttestFlow localizer.",
+            "detector": "independent_effect_predicate",
+            "input_source": "checked_in_manual_predicate_pair",
+            "localizer": "generic_graph_commitment_diff",
+            "uses_contract_compiler": false,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "generic trace baseline effect check: expected effect=false; observed count=0",
+              "verdict": "PASS"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "generic trace baseline effect check: expected effect=false; observed count=0",
+              "verdict": "PASS"
+            }
+          }
+        }
+      },
+      "budget": {
+        "budget_id": "native-p0-same-observation-v8",
+        "input_candidates": 1,
+        "observer_record_limit": 4,
+        "sut_executions": 2,
+        "timeout_ms": 5000,
+        "trace_event_limit": 16
+      },
+      "budget_ok": true,
+      "compiler_trial_id": "pair-3d1ea45686b379ed-negative-actual-1",
+      "effect_records": 1,
+      "health": {
+        "observer_chain_valid": true,
+        "positive_control_reachable": true,
+        "reasons": [],
+        "trace_complete": true
+      },
+      "pair": {
+        "positive": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-01",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-01",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-01"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "05c7da74-0605-4f4a-8e6f-3626c2dde284",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-01",
+              "sequence": 1,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "12cf0521-18e7-49b6-bbbc-c1e485460802",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-01",
+              "sequence": 2,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": "allow",
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "ec021ffad2051b7fe40b2be74c05962ef378359adeee6d7d9ebc6dfcdbff124d",
+              "effect_id": "grant_local_context_access",
+              "event_id": "f783750f-62a2-46c0-ab3a-0b68fcf5e073",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "05c7da74-0605-4f4a-8e6f-3626c2dde284",
+                "12cf0521-18e7-49b6-bbbc-c1e485460802"
+              ],
+              "request_id": "request-attempt-01",
+              "sequence": 3,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "a97a6434-5166-4481-b445-872d4175a5e9",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "f783750f-62a2-46c0-ab3a-0b68fcf5e073"
+              ],
+              "request_id": "request-attempt-01",
+              "sequence": 4,
+              "trial_id": "trial-attempt-01"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-01",
+            "role": "positive",
+            "scenario_id": "attempt-01"
+          }
+        },
+        "test": {
+          "effect_records": [],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-03",
+              "decision": null,
+              "decision_id": "decision-attempt-03",
+              "dependency_commitment": "ef7a5bcecfba271e3aeba27b5ae2f392a630915007e153b18c35c8b4463fdfc7",
+              "effect_id": "grant_local_context_access",
+              "event_id": "db26716d-b668-4b7c-9cff-bcd16c550d1c",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-03",
+              "sequence": 1,
+              "trial_id": "trial-attempt-03"
+            },
+            {
+              "attempt_id": "attempt-attempt-03",
+              "decision": null,
+              "decision_id": "decision-attempt-03",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "e018afcd-19b6-4f53-bf51-f9a7c37560bc",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-03",
+              "sequence": 2,
+              "trial_id": "trial-attempt-03"
+            },
+            {
+              "attempt_id": "attempt-attempt-03",
+              "decision": "deny",
+              "decision_id": "decision-attempt-03",
+              "dependency_commitment": "c37142b523dbb4fa0d55f866827e509ab1672cba0c81dc05806ee9aca7efb4c6",
+              "effect_id": "grant_local_context_access",
+              "event_id": "07a25ef0-a015-448b-8edf-e8ec6559898e",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "db26716d-b668-4b7c-9cff-bcd16c550d1c",
+                "e018afcd-19b6-4f53-bf51-f9a7c37560bc"
+              ],
+              "request_id": "request-attempt-03",
+              "sequence": 3,
+              "trial_id": "trial-attempt-03"
+            },
+            {
+              "attempt_id": "attempt-attempt-03",
+              "decision": null,
+              "decision_id": "decision-attempt-03",
+              "dependency_commitment": "cee64f994a9a6012416b38ab43627d26bedd0a310747f5bdfc942ff7b6af2d47",
+              "effect_id": "grant_local_context_access",
+              "event_id": "4f9c0d35-9114-47d0-a70c-373cf2923279",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "07a25ef0-a015-448b-8edf-e8ec6559898e"
+              ],
+              "request_id": "request-attempt-03",
+              "sequence": 4,
+              "trial_id": "trial-attempt-03"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-60cc2ad9e3df712768bf098d",
+            "changed_fields": [
+              "actual"
+            ],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-03",
+            "role": "negative",
+            "scenario_id": "attempt-03"
+          }
+        }
+      },
+      "pair_sha256": "6bab612014b467a7114a23631d2d64941958b02cd79a1c221fe5ce2b19c2cdc6",
+      "positive_run_id": "attempt-01",
+      "preparation_exact": true,
+      "same_pair_unmodified": true,
+      "status": "ANALYZED",
+      "test_run_id": "attempt-03",
+      "trace_records": 8
+    },
+    {
+      "application_id": "application-1",
+      "arms": {
+        "A_FULL": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "A_FULL",
+            "boundary": "Full generated-test, typed-trace, and independent-effect pipeline.",
+            "detector": "attestflow_effect_grounded_oracle",
+            "input_source": "attestflow_contract_compiler",
+            "localizer": "typed_attestflow_trace_frontier",
+            "uses_contract_compiler": true,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:expected; core-positive=PASS; core-test=PASS; core-localization-probe=NO_PROHIBITED_EFFECT; relation violation did not produce the prohibited effect",
+              "verdict": "PASS"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:expected; core-positive=PASS; core-test=PASS; core-localization-probe=NO_PROHIBITED_EFFECT; relation violation did not produce the prohibited effect",
+              "verdict": "PASS"
+            }
+          }
+        },
+        "B3_TRACE": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "B3_TRACE",
+            "boundary": "Generic trace differencing uses the same graph endpoints but not the AttestFlow localizer.",
+            "detector": "independent_effect_predicate",
+            "input_source": "checked_in_manual_predicate_pair",
+            "localizer": "generic_graph_commitment_diff",
+            "uses_contract_compiler": false,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "generic trace baseline effect check: expected effect=false; observed count=0",
+              "verdict": "PASS"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "generic trace baseline effect check: expected effect=false; observed count=0",
+              "verdict": "PASS"
+            }
+          }
+        }
+      },
+      "budget": {
+        "budget_id": "native-p0-same-observation-v8",
+        "input_candidates": 1,
+        "observer_record_limit": 4,
+        "sut_executions": 2,
+        "timeout_ms": 5000,
+        "trace_event_limit": 16
+      },
+      "budget_ok": true,
+      "compiler_trial_id": "pair-3d1ea45686b379ed-negative-expected-1",
+      "effect_records": 1,
+      "health": {
+        "observer_chain_valid": true,
+        "positive_control_reachable": true,
+        "reasons": [],
+        "trace_complete": true
+      },
+      "pair": {
+        "positive": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-01",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-01",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-01"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "05c7da74-0605-4f4a-8e6f-3626c2dde284",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-01",
+              "sequence": 1,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "12cf0521-18e7-49b6-bbbc-c1e485460802",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-01",
+              "sequence": 2,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": "allow",
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "ec021ffad2051b7fe40b2be74c05962ef378359adeee6d7d9ebc6dfcdbff124d",
+              "effect_id": "grant_local_context_access",
+              "event_id": "f783750f-62a2-46c0-ab3a-0b68fcf5e073",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "05c7da74-0605-4f4a-8e6f-3626c2dde284",
+                "12cf0521-18e7-49b6-bbbc-c1e485460802"
+              ],
+              "request_id": "request-attempt-01",
+              "sequence": 3,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "a97a6434-5166-4481-b445-872d4175a5e9",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "f783750f-62a2-46c0-ab3a-0b68fcf5e073"
+              ],
+              "request_id": "request-attempt-01",
+              "sequence": 4,
+              "trial_id": "trial-attempt-01"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-01",
+            "role": "positive",
+            "scenario_id": "attempt-01"
+          }
+        },
+        "test": {
+          "effect_records": [],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-05",
+              "decision": null,
+              "decision_id": "decision-attempt-05",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "08b818f6-db53-4389-aa56-8c9e3f73a562",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-05",
+              "sequence": 1,
+              "trial_id": "trial-attempt-05"
+            },
+            {
+              "attempt_id": "attempt-attempt-05",
+              "decision": null,
+              "decision_id": "decision-attempt-05",
+              "dependency_commitment": "42191e00f2e2c100fce8ad7fc36d2da53f4994fd580665a137209d9841f93218",
+              "effect_id": "grant_local_context_access",
+              "event_id": "9683d71f-83f6-4ede-8559-4ca06cfb3dac",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-05",
+              "sequence": 2,
+              "trial_id": "trial-attempt-05"
+            },
+            {
+              "attempt_id": "attempt-attempt-05",
+              "decision": "deny",
+              "decision_id": "decision-attempt-05",
+              "dependency_commitment": "c6559b1d1061dbcfa14598b71c13074872413c3447118a81e06296d044524a6c",
+              "effect_id": "grant_local_context_access",
+              "event_id": "10f90dfa-ab98-4bd5-bcc1-1c719dcd8da4",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "08b818f6-db53-4389-aa56-8c9e3f73a562",
+                "9683d71f-83f6-4ede-8559-4ca06cfb3dac"
+              ],
+              "request_id": "request-attempt-05",
+              "sequence": 3,
+              "trial_id": "trial-attempt-05"
+            },
+            {
+              "attempt_id": "attempt-attempt-05",
+              "decision": null,
+              "decision_id": "decision-attempt-05",
+              "dependency_commitment": "cee64f994a9a6012416b38ab43627d26bedd0a310747f5bdfc942ff7b6af2d47",
+              "effect_id": "grant_local_context_access",
+              "event_id": "ca471314-9b86-4e8d-ad23-532c0cf646d3",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "10f90dfa-ab98-4bd5-bcc1-1c719dcd8da4"
+              ],
+              "request_id": "request-attempt-05",
+              "sequence": 4,
+              "trial_id": "trial-attempt-05"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [
+              "expected"
+            ],
+            "expected_value": "context-2cef281431ec2ddea9caf9e7",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-05",
+            "role": "negative",
+            "scenario_id": "attempt-05"
+          }
+        }
+      },
+      "pair_sha256": "02cb4f730d1f6b411102058dcb7aebd1ec2de505a83def3220024284ab931e53",
+      "positive_run_id": "attempt-01",
+      "preparation_exact": true,
+      "same_pair_unmodified": true,
+      "status": "ANALYZED",
+      "test_run_id": "attempt-05",
+      "trace_records": 8
+    },
+    {
+      "application_id": "application-1",
+      "arms": {
+        "A_FULL": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "A_FULL",
+            "boundary": "Full generated-test, typed-trace, and independent-effect pipeline.",
+            "detector": "attestflow_effect_grounded_oracle",
+            "input_source": "attestflow_contract_compiler",
+            "localizer": "typed_attestflow_trace_frontier",
+            "uses_contract_compiler": true,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:irrelevant; core-positive=PASS; core-test=PASS; core-localization-probe=NOT_APPLICABLE; irrelevant perturbation preserved the allowed effect",
+              "verdict": "PASS"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:irrelevant; core-positive=PASS; core-test=PASS; core-localization-probe=NOT_APPLICABLE; irrelevant perturbation preserved the allowed effect",
+              "verdict": "PASS"
+            }
+          }
+        },
+        "B3_TRACE": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "B3_TRACE",
+            "boundary": "Generic trace differencing uses the same graph endpoints but not the AttestFlow localizer.",
+            "detector": "independent_effect_predicate",
+            "input_source": "checked_in_manual_predicate_pair",
+            "localizer": "generic_graph_commitment_diff",
+            "uses_contract_compiler": false,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "generic trace baseline effect check: expected effect=true; observed count=1",
+              "verdict": "PASS"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "generic trace baseline effect check: expected effect=true; observed count=1",
+              "verdict": "PASS"
+            }
+          }
+        }
+      },
+      "budget": {
+        "budget_id": "native-p0-same-observation-v8",
+        "input_candidates": 1,
+        "observer_record_limit": 4,
+        "sut_executions": 2,
+        "timeout_ms": 5000,
+        "trace_event_limit": 16
+      },
+      "budget_ok": true,
+      "compiler_trial_id": "pair-3d1ea45686b379ed-specificity-irrelevant",
+      "effect_records": 2,
+      "health": {
+        "observer_chain_valid": true,
+        "positive_control_reachable": true,
+        "reasons": [],
+        "trace_complete": true
+      },
+      "pair": {
+        "positive": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-01",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-01",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-01"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "05c7da74-0605-4f4a-8e6f-3626c2dde284",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-01",
+              "sequence": 1,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "12cf0521-18e7-49b6-bbbc-c1e485460802",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-01",
+              "sequence": 2,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": "allow",
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "ec021ffad2051b7fe40b2be74c05962ef378359adeee6d7d9ebc6dfcdbff124d",
+              "effect_id": "grant_local_context_access",
+              "event_id": "f783750f-62a2-46c0-ab3a-0b68fcf5e073",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "05c7da74-0605-4f4a-8e6f-3626c2dde284",
+                "12cf0521-18e7-49b6-bbbc-c1e485460802"
+              ],
+              "request_id": "request-attempt-01",
+              "sequence": 3,
+              "trial_id": "trial-attempt-01"
+            },
+            {
+              "attempt_id": "attempt-attempt-01",
+              "decision": null,
+              "decision_id": "decision-attempt-01",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "a97a6434-5166-4481-b445-872d4175a5e9",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "f783750f-62a2-46c0-ab3a-0b68fcf5e073"
+              ],
+              "request_id": "request-attempt-01",
+              "sequence": 4,
+              "trial_id": "trial-attempt-01"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-01",
+            "role": "positive",
+            "scenario_id": "attempt-01"
+          }
+        },
+        "test": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-07",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-07",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-07"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-07",
+              "decision": null,
+              "decision_id": "decision-attempt-07",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "1399c6fd-3290-4929-bf59-27793949811f",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-07",
+              "sequence": 1,
+              "trial_id": "trial-attempt-07"
+            },
+            {
+              "attempt_id": "attempt-attempt-07",
+              "decision": null,
+              "decision_id": "decision-attempt-07",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "89396a82-79f1-4a8f-adcc-146978fe984d",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-07",
+              "sequence": 2,
+              "trial_id": "trial-attempt-07"
+            },
+            {
+              "attempt_id": "attempt-attempt-07",
+              "decision": "allow",
+              "decision_id": "decision-attempt-07",
+              "dependency_commitment": "ec021ffad2051b7fe40b2be74c05962ef378359adeee6d7d9ebc6dfcdbff124d",
+              "effect_id": "grant_local_context_access",
+              "event_id": "55b3330c-8027-4fdc-9df1-30e4f27813ec",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "1399c6fd-3290-4929-bf59-27793949811f",
+                "89396a82-79f1-4a8f-adcc-146978fe984d"
+              ],
+              "request_id": "request-attempt-07",
+              "sequence": 3,
+              "trial_id": "trial-attempt-07"
+            },
+            {
+              "attempt_id": "attempt-attempt-07",
+              "decision": null,
+              "decision_id": "decision-attempt-07",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "d2b1359d-7df7-489f-ad07-c452b55a232d",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "55b3330c-8027-4fdc-9df1-30e4f27813ec"
+              ],
+              "request_id": "request-attempt-07",
+              "sequence": 4,
+              "trial_id": "trial-attempt-07"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [
+              "irrelevant"
+            ],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-dc382cce308bcf24f82bc10f",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-07",
+            "role": "specificity_control",
+            "scenario_id": "attempt-07"
+          }
+        }
+      },
+      "pair_sha256": "29e425939a00765240286dc21e68f83312b64efe9700aa2ee9604b0742c6e7b4",
+      "positive_run_id": "attempt-01",
+      "preparation_exact": true,
+      "same_pair_unmodified": true,
+      "status": "ANALYZED",
+      "test_run_id": "attempt-07",
+      "trace_records": 8
+    },
+    {
+      "application_id": "application-2",
+      "arms": {
+        "A_FULL": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "A_FULL",
+            "boundary": "Full generated-test, typed-trace, and independent-effect pipeline.",
+            "detector": "attestflow_effect_grounded_oracle",
+            "input_source": "attestflow_contract_compiler",
+            "localizer": "typed_attestflow_trace_frontier",
+            "uses_contract_compiler": true,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [
+                {
+                  "from_node_id": "application_gate",
+                  "to_node_id": "effect_opportunity"
+                }
+              ],
+              "localization_mode": "FIRST_OBSERVED_LOSS",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:actual; core-positive=PASS; core-test=FAIL; core-localization-probe=FIRST_OBSERVED_LOSS; relation violation produced the independently observed prohibited effect",
+              "verdict": "FAIL"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [
+                {
+                  "from_node_id": "application_gate",
+                  "to_node_id": "effect_opportunity"
+                }
+              ],
+              "localization_mode": "FIRST_OBSERVED_LOSS",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:actual; core-positive=PASS; core-test=FAIL; core-localization-probe=FIRST_OBSERVED_LOSS; relation violation produced the independently observed prohibited effect",
+              "verdict": "FAIL"
+            }
+          }
+        },
+        "B3_TRACE": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "B3_TRACE",
+            "boundary": "Generic trace differencing uses the same graph endpoints but not the AttestFlow localizer.",
+            "detector": "independent_effect_predicate",
+            "input_source": "checked_in_manual_predicate_pair",
+            "localizer": "generic_graph_commitment_diff",
+            "uses_contract_compiler": false,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [
+                {
+                  "from_node_id": "application_gate",
+                  "to_node_id": "effect_opportunity"
+                }
+              ],
+              "localization_mode": "FIRST_OBSERVED_LOSS",
+              "reason": "generic trace baseline effect check: expected effect=false; observed count=1; generic trace frontier size=1",
+              "verdict": "FAIL"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [
+                {
+                  "from_node_id": "application_gate",
+                  "to_node_id": "effect_opportunity"
+                }
+              ],
+              "localization_mode": "FIRST_OBSERVED_LOSS",
+              "reason": "generic trace baseline effect check: expected effect=false; observed count=1; generic trace frontier size=1",
+              "verdict": "FAIL"
+            }
+          }
+        }
+      },
+      "budget": {
+        "budget_id": "native-p0-same-observation-v8",
+        "input_candidates": 1,
+        "observer_record_limit": 4,
+        "sut_executions": 2,
+        "timeout_ms": 5000,
+        "trace_event_limit": 16
+      },
+      "budget_ok": true,
+      "compiler_trial_id": "pair-3d1ea45686b379ed-negative-actual-1",
+      "effect_records": 2,
+      "health": {
+        "observer_chain_valid": true,
+        "positive_control_reachable": true,
+        "reasons": [],
+        "trace_complete": true
+      },
+      "pair": {
+        "positive": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-02",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-02",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-02"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "0335d19c-8920-496a-ad02-529105570541",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-02",
+              "sequence": 1,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "45b039d1-2871-479d-a8a8-919daeddd7ec",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-02",
+              "sequence": 2,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": "allow",
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "ec021ffad2051b7fe40b2be74c05962ef378359adeee6d7d9ebc6dfcdbff124d",
+              "effect_id": "grant_local_context_access",
+              "event_id": "8cd80697-2497-49d0-9b3b-646f30877bf3",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "0335d19c-8920-496a-ad02-529105570541",
+                "45b039d1-2871-479d-a8a8-919daeddd7ec"
+              ],
+              "request_id": "request-attempt-02",
+              "sequence": 3,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "b1e55b00-10a6-40db-915d-081f88419c11",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "8cd80697-2497-49d0-9b3b-646f30877bf3"
+              ],
+              "request_id": "request-attempt-02",
+              "sequence": 4,
+              "trial_id": "trial-attempt-02"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-02",
+            "role": "positive",
+            "scenario_id": "attempt-02"
+          }
+        },
+        "test": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-04",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-04",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-04"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-04",
+              "decision": null,
+              "decision_id": "decision-attempt-04",
+              "dependency_commitment": "ef7a5bcecfba271e3aeba27b5ae2f392a630915007e153b18c35c8b4463fdfc7",
+              "effect_id": "grant_local_context_access",
+              "event_id": "67c8aa8a-9687-47ac-a998-611c5f4039b8",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-04",
+              "sequence": 1,
+              "trial_id": "trial-attempt-04"
+            },
+            {
+              "attempt_id": "attempt-attempt-04",
+              "decision": null,
+              "decision_id": "decision-attempt-04",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "c4d9daf5-5e30-43ed-a17a-0e8ea8e93081",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-04",
+              "sequence": 2,
+              "trial_id": "trial-attempt-04"
+            },
+            {
+              "attempt_id": "attempt-attempt-04",
+              "decision": "allow",
+              "decision_id": "decision-attempt-04",
+              "dependency_commitment": "1d043794fff7415a22e35b7a4dfc620a2050167e485f71e9d6ff70c256e2eb0e",
+              "effect_id": "grant_local_context_access",
+              "event_id": "80ecce4d-5a33-42bb-be70-116f1d133ace",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "67c8aa8a-9687-47ac-a998-611c5f4039b8",
+                "c4d9daf5-5e30-43ed-a17a-0e8ea8e93081"
+              ],
+              "request_id": "request-attempt-04",
+              "sequence": 3,
+              "trial_id": "trial-attempt-04"
+            },
+            {
+              "attempt_id": "attempt-attempt-04",
+              "decision": null,
+              "decision_id": "decision-attempt-04",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "4c6c568a-017d-4afc-aa69-24efa3c7ca25",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "80ecce4d-5a33-42bb-be70-116f1d133ace"
+              ],
+              "request_id": "request-attempt-04",
+              "sequence": 4,
+              "trial_id": "trial-attempt-04"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-60cc2ad9e3df712768bf098d",
+            "changed_fields": [
+              "actual"
+            ],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-04",
+            "role": "negative",
+            "scenario_id": "attempt-04"
+          }
+        }
+      },
+      "pair_sha256": "3afe2e68608f2b7481b27e419c95d427212864c6754797c2887a65f54cfc9530",
+      "positive_run_id": "attempt-02",
+      "preparation_exact": true,
+      "same_pair_unmodified": true,
+      "status": "ANALYZED",
+      "test_run_id": "attempt-04",
+      "trace_records": 8
+    },
+    {
+      "application_id": "application-2",
+      "arms": {
+        "A_FULL": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "A_FULL",
+            "boundary": "Full generated-test, typed-trace, and independent-effect pipeline.",
+            "detector": "attestflow_effect_grounded_oracle",
+            "input_source": "attestflow_contract_compiler",
+            "localizer": "typed_attestflow_trace_frontier",
+            "uses_contract_compiler": true,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [
+                {
+                  "from_node_id": "application_gate",
+                  "to_node_id": "effect_opportunity"
+                }
+              ],
+              "localization_mode": "FIRST_OBSERVED_LOSS",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:expected; core-positive=PASS; core-test=FAIL; core-localization-probe=FIRST_OBSERVED_LOSS; relation violation produced the independently observed prohibited effect",
+              "verdict": "FAIL"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [
+                {
+                  "from_node_id": "application_gate",
+                  "to_node_id": "effect_opportunity"
+                }
+              ],
+              "localization_mode": "FIRST_OBSERVED_LOSS",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:expected; core-positive=PASS; core-test=FAIL; core-localization-probe=FIRST_OBSERVED_LOSS; relation violation produced the independently observed prohibited effect",
+              "verdict": "FAIL"
+            }
+          }
+        },
+        "B3_TRACE": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "B3_TRACE",
+            "boundary": "Generic trace differencing uses the same graph endpoints but not the AttestFlow localizer.",
+            "detector": "independent_effect_predicate",
+            "input_source": "checked_in_manual_predicate_pair",
+            "localizer": "generic_graph_commitment_diff",
+            "uses_contract_compiler": false,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [
+                {
+                  "from_node_id": "application_gate",
+                  "to_node_id": "effect_opportunity"
+                }
+              ],
+              "localization_mode": "FIRST_OBSERVED_LOSS",
+              "reason": "generic trace baseline effect check: expected effect=false; observed count=1; generic trace frontier size=1",
+              "verdict": "FAIL"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [
+                {
+                  "from_node_id": "application_gate",
+                  "to_node_id": "effect_opportunity"
+                }
+              ],
+              "localization_mode": "FIRST_OBSERVED_LOSS",
+              "reason": "generic trace baseline effect check: expected effect=false; observed count=1; generic trace frontier size=1",
+              "verdict": "FAIL"
+            }
+          }
+        }
+      },
+      "budget": {
+        "budget_id": "native-p0-same-observation-v8",
+        "input_candidates": 1,
+        "observer_record_limit": 4,
+        "sut_executions": 2,
+        "timeout_ms": 5000,
+        "trace_event_limit": 16
+      },
+      "budget_ok": true,
+      "compiler_trial_id": "pair-3d1ea45686b379ed-negative-expected-1",
+      "effect_records": 2,
+      "health": {
+        "observer_chain_valid": true,
+        "positive_control_reachable": true,
+        "reasons": [],
+        "trace_complete": true
+      },
+      "pair": {
+        "positive": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-02",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-02",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-02"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "0335d19c-8920-496a-ad02-529105570541",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-02",
+              "sequence": 1,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "45b039d1-2871-479d-a8a8-919daeddd7ec",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-02",
+              "sequence": 2,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": "allow",
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "ec021ffad2051b7fe40b2be74c05962ef378359adeee6d7d9ebc6dfcdbff124d",
+              "effect_id": "grant_local_context_access",
+              "event_id": "8cd80697-2497-49d0-9b3b-646f30877bf3",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "0335d19c-8920-496a-ad02-529105570541",
+                "45b039d1-2871-479d-a8a8-919daeddd7ec"
+              ],
+              "request_id": "request-attempt-02",
+              "sequence": 3,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "b1e55b00-10a6-40db-915d-081f88419c11",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "8cd80697-2497-49d0-9b3b-646f30877bf3"
+              ],
+              "request_id": "request-attempt-02",
+              "sequence": 4,
+              "trial_id": "trial-attempt-02"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-02",
+            "role": "positive",
+            "scenario_id": "attempt-02"
+          }
+        },
+        "test": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-06",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-06",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-06"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-06",
+              "decision": null,
+              "decision_id": "decision-attempt-06",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "e37569f0-70f3-4422-a1dd-4bc84d4b5dad",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-06",
+              "sequence": 1,
+              "trial_id": "trial-attempt-06"
+            },
+            {
+              "attempt_id": "attempt-attempt-06",
+              "decision": null,
+              "decision_id": "decision-attempt-06",
+              "dependency_commitment": "42191e00f2e2c100fce8ad7fc36d2da53f4994fd580665a137209d9841f93218",
+              "effect_id": "grant_local_context_access",
+              "event_id": "3beafc04-951b-48f1-9cef-4255e2eda436",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-06",
+              "sequence": 2,
+              "trial_id": "trial-attempt-06"
+            },
+            {
+              "attempt_id": "attempt-attempt-06",
+              "decision": "allow",
+              "decision_id": "decision-attempt-06",
+              "dependency_commitment": "9c542dcd54ff5985a8e50acbaf05b46cf9d8769891e8a234026a9ec2eb2890bf",
+              "effect_id": "grant_local_context_access",
+              "event_id": "a8a45e9c-8037-4844-9d82-5e7591b27a45",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "e37569f0-70f3-4422-a1dd-4bc84d4b5dad",
+                "3beafc04-951b-48f1-9cef-4255e2eda436"
+              ],
+              "request_id": "request-attempt-06",
+              "sequence": 3,
+              "trial_id": "trial-attempt-06"
+            },
+            {
+              "attempt_id": "attempt-attempt-06",
+              "decision": null,
+              "decision_id": "decision-attempt-06",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "ba362ffc-a4ba-46bd-9ae6-9f46a8b7cdb8",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "a8a45e9c-8037-4844-9d82-5e7591b27a45"
+              ],
+              "request_id": "request-attempt-06",
+              "sequence": 4,
+              "trial_id": "trial-attempt-06"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [
+              "expected"
+            ],
+            "expected_value": "context-2cef281431ec2ddea9caf9e7",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-06",
+            "role": "negative",
+            "scenario_id": "attempt-06"
+          }
+        }
+      },
+      "pair_sha256": "cde4204be962127fb74a870cb4318ad89832c77ae8f80eed9fb5c8554dcff3d8",
+      "positive_run_id": "attempt-02",
+      "preparation_exact": true,
+      "same_pair_unmodified": true,
+      "status": "ANALYZED",
+      "test_run_id": "attempt-06",
+      "trace_records": 8
+    },
+    {
+      "application_id": "application-2",
+      "arms": {
+        "A_FULL": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "A_FULL",
+            "boundary": "Full generated-test, typed-trace, and independent-effect pipeline.",
+            "detector": "attestflow_effect_grounded_oracle",
+            "input_source": "attestflow_contract_compiler",
+            "localizer": "typed_attestflow_trace_frontier",
+            "uses_contract_compiler": true,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:irrelevant; core-positive=PASS; core-test=PASS; core-localization-probe=NOT_APPLICABLE; irrelevant perturbation preserved the allowed effect",
+              "verdict": "PASS"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "full AttestFlow core: core-compiler=attestflow-compiler/0.3; core-compiler-values-exact=true; core-input-derivation=single-axis:irrelevant; core-positive=PASS; core-test=PASS; core-localization-probe=NOT_APPLICABLE; irrelevant perturbation preserved the allowed effect",
+              "verdict": "PASS"
+            }
+          }
+        },
+        "B3_TRACE": {
+          "gate_admitted": true,
+          "profile": {
+            "arm_id": "B3_TRACE",
+            "boundary": "Generic trace differencing uses the same graph endpoints but not the AttestFlow localizer.",
+            "detector": "independent_effect_predicate",
+            "input_source": "checked_in_manual_predicate_pair",
+            "localizer": "generic_graph_commitment_diff",
+            "uses_contract_compiler": false,
+            "uses_effect_for_verdict": true,
+            "uses_trace_for_verdict": true
+          },
+          "raw_diagnostic": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "generic trace baseline effect check: expected effect=true; observed count=1",
+              "verdict": "PASS"
+            }
+          },
+          "shared_gate_output": {
+            "call_status": "RETURNED",
+            "result": {
+              "frontier": [],
+              "localization_mode": "NOT_APPLICABLE",
+              "reason": "generic trace baseline effect check: expected effect=true; observed count=1",
+              "verdict": "PASS"
+            }
+          }
+        }
+      },
+      "budget": {
+        "budget_id": "native-p0-same-observation-v8",
+        "input_candidates": 1,
+        "observer_record_limit": 4,
+        "sut_executions": 2,
+        "timeout_ms": 5000,
+        "trace_event_limit": 16
+      },
+      "budget_ok": true,
+      "compiler_trial_id": "pair-3d1ea45686b379ed-specificity-irrelevant",
+      "effect_records": 2,
+      "health": {
+        "observer_chain_valid": true,
+        "positive_control_reachable": true,
+        "reasons": [],
+        "trace_complete": true
+      },
+      "pair": {
+        "positive": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-02",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-02",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-02"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "0335d19c-8920-496a-ad02-529105570541",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-02",
+              "sequence": 1,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "45b039d1-2871-479d-a8a8-919daeddd7ec",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-02",
+              "sequence": 2,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": "allow",
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "ec021ffad2051b7fe40b2be74c05962ef378359adeee6d7d9ebc6dfcdbff124d",
+              "effect_id": "grant_local_context_access",
+              "event_id": "8cd80697-2497-49d0-9b3b-646f30877bf3",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "0335d19c-8920-496a-ad02-529105570541",
+                "45b039d1-2871-479d-a8a8-919daeddd7ec"
+              ],
+              "request_id": "request-attempt-02",
+              "sequence": 3,
+              "trial_id": "trial-attempt-02"
+            },
+            {
+              "attempt_id": "attempt-attempt-02",
+              "decision": null,
+              "decision_id": "decision-attempt-02",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "b1e55b00-10a6-40db-915d-081f88419c11",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "8cd80697-2497-49d0-9b3b-646f30877bf3"
+              ],
+              "request_id": "request-attempt-02",
+              "sequence": 4,
+              "trial_id": "trial-attempt-02"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-e3cb7c956b143ede095e13b6",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-02",
+            "role": "positive",
+            "scenario_id": "attempt-02"
+          }
+        },
+        "test": {
+          "effect_records": [
+            {
+              "attempt_id": "attempt-attempt-08",
+              "effect_id": "grant_local_context_access",
+              "observed_at_sequence": 5,
+              "request_id": "request-attempt-08",
+              "resource_commitment": "717d744f212dfcd850aab9b75bc48e8147ae1f1828ddd04894dac5369b08c89e",
+              "trial_id": "trial-attempt-08"
+            }
+          ],
+          "observer_available": true,
+          "trace_events": [
+            {
+              "attempt_id": "attempt-attempt-08",
+              "decision": null,
+              "decision_id": "decision-attempt-08",
+              "dependency_commitment": "0a2c0b860b9607b805e09b6a2d0f2231cc3df8fafc056b8f15a64b72eec0eb77",
+              "effect_id": "grant_local_context_access",
+              "event_id": "d84f696b-a0e2-4319-b3c5-4a027b05e53f",
+              "node_id": "request_read",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-08",
+              "sequence": 1,
+              "trial_id": "trial-attempt-08"
+            },
+            {
+              "attempt_id": "attempt-attempt-08",
+              "decision": null,
+              "decision_id": "decision-attempt-08",
+              "dependency_commitment": "8a8e8ba02e192c2a7a33e9db6a5a433c3615f30c4a3e66ae47f2d53077345620",
+              "effect_id": "grant_local_context_access",
+              "event_id": "f221a05e-2425-4bb6-a9ae-6a96b0b6b37c",
+              "node_id": "policy_load",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [],
+              "request_id": "request-attempt-08",
+              "sequence": 2,
+              "trial_id": "trial-attempt-08"
+            },
+            {
+              "attempt_id": "attempt-attempt-08",
+              "decision": "allow",
+              "decision_id": "decision-attempt-08",
+              "dependency_commitment": "ec021ffad2051b7fe40b2be74c05962ef378359adeee6d7d9ebc6dfcdbff124d",
+              "effect_id": "grant_local_context_access",
+              "event_id": "30d05580-c36d-4634-824a-29604066fdef",
+              "node_id": "application_gate",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "d84f696b-a0e2-4319-b3c5-4a027b05e53f",
+                "f221a05e-2425-4bb6-a9ae-6a96b0b6b37c"
+              ],
+              "request_id": "request-attempt-08",
+              "sequence": 3,
+              "trial_id": "trial-attempt-08"
+            },
+            {
+              "attempt_id": "attempt-attempt-08",
+              "decision": null,
+              "decision_id": "decision-attempt-08",
+              "dependency_commitment": "c5c15322f5fd1207ea361fafa175aab8e7f45e00718a7cd118fedb16d19e72fc",
+              "effect_id": "grant_local_context_access",
+              "event_id": "3aa08ebd-15d7-4ccf-bed4-988fe9c4718e",
+              "node_id": "effect_opportunity",
+              "policy_epoch": 1,
+              "predecessor_event_ids": [
+                "30d05580-c36d-4634-824a-29604066fdef"
+              ],
+              "request_id": "request-attempt-08",
+              "sequence": 4,
+              "trial_id": "trial-attempt-08"
+            }
+          ],
+          "trial": {
+            "actual_value": "context-437ae1d0fb49c5ab2b116457",
+            "changed_fields": [
+              "irrelevant"
+            ],
+            "expected_value": "context-437ae1d0fb49c5ab2b116457",
+            "family_id": "CONTROLLED_CONTEXT_CONSUMER",
+            "irrelevant_label": "irrelevant-dc382cce308bcf24f82bc10f",
+            "policy_epoch": 1,
+            "request_id": "request-attempt-08",
+            "role": "specificity_control",
+            "scenario_id": "attempt-08"
+          }
+        }
+      },
+      "pair_sha256": "958663aacb01bca51f63bc988c97f42ba33fc5b6417ec35963d1aca3e90999f2",
+      "positive_run_id": "attempt-02",
+      "preparation_exact": true,
+      "same_pair_unmodified": true,
+      "status": "ANALYZED",
+      "test_run_id": "attempt-08",
+      "trace_records": 8
+    }
+  ],
+  "run_qualification": [
+    {
+      "physical_effect_count": 1,
+      "run_id": "attempt-01",
+      "status": "QUALIFIED"
+    },
+    {
+      "physical_effect_count": 1,
+      "run_id": "attempt-02",
+      "status": "QUALIFIED"
+    },
+    {
+      "physical_effect_count": 0,
+      "run_id": "attempt-03",
+      "status": "QUALIFIED"
+    },
+    {
+      "physical_effect_count": 1,
+      "run_id": "attempt-04",
+      "status": "QUALIFIED"
+    },
+    {
+      "physical_effect_count": 0,
+      "run_id": "attempt-05",
+      "status": "QUALIFIED"
+    },
+    {
+      "physical_effect_count": 1,
+      "run_id": "attempt-06",
+      "status": "QUALIFIED"
+    },
+    {
+      "physical_effect_count": 1,
+      "run_id": "attempt-07",
+      "status": "QUALIFIED"
+    },
+    {
+      "physical_effect_count": 1,
+      "run_id": "attempt-08",
+      "status": "QUALIFIED"
+    }
+  ],
+  "source_identity": {
+    "original_manifest_sha256": "7704db80f052a8e4e7afff00718899ee84ab8f6236729db0ee80f2b4935791ca",
+    "source_sha256": {
+      "benchmarks/__init__.py": "cb3fa25321d2fb90f25acca011eac554e4d352ba8a7f9133178b2a4b39d51232",
+      "benchmarks/attestflow_synthetic/__init__.py": "2964c15ec8235432a44bb564081d175be22ce6223feda38315518151aac4013c",
+      "benchmarks/attestflow_synthetic/adapter.py": "24cd0554ec74d3748d674c8520231fc44472cfa2cd2d9f6273a36086648d78d2",
+      "benchmarks/attestflow_synthetic/analyzer.py": "5e2029ca65ebb3aa74337276fa57a2305739852f259a83b76fdd2080572fcce0",
+      "benchmarks/attestflow_synthetic/api.py": "b39b70ef4ad4b036633dc1383ed479f68746371b00bf0f4493a6a3fb4fadcbb5",
+      "benchmarks/attestflow_synthetic/core_analyzer.py": "409cc726a1a838351c5f8e2210ea870ea425268b3655d075c9735e152d4d1d2a",
+      "benchmarks/attestflow_synthetic/evaluate.py": "ae0968cf8a7fd9777a0a4d3734e8bb33f1593eda7c03cb46d11edd38e98197e4",
+      "benchmarks/attestflow_synthetic/loader.py": "baa3d11ed532489d32467c1c38465dc68b09053a5ebb0f7982f0833a35797025",
+      "benchmarks/attestflow_synthetic/runner.py": "80c5bfc37316b01e40ab43990ba91e5cbf50d122f64456b8dacb9e5797ade13f",
+      "benchmarks/attestflow_synthetic/simulator.py": "4cda0a39f86d997c6d3024db8e513e8368e763f59a53c8ac518bd67596002c06",
+      "contracts/attestflow-contract.schema.json": "ed688b3b14ce7c852ab11f582b170edf84b3fbcf1280d9a4bb6f7a6d9811aa97",
+      "experiments/protocols/v2/freeze-20260904T043902Z/MANIFEST.json": "7704db80f052a8e4e7afff00718899ee84ab8f6236729db0ee80f2b4935791ca",
+      "experiments/runtime/__init__.py": "0abb0c29e37667e40d06a77d246d03908fdce2b8b85eb52e0699941ba0feb1e8",
+      "experiments/runtime/arms.py": "1d7a1dcdc11f7420ea0db088e980abe7e8c137ef3bca44e8a365db85ff9ad96d",
+      "experiments/runtime/models.py": "ba634c134a851a26c0b3d516bb460bfba4366101432fcd011d1263d00b7d8f1a",
+      "experiments/runtime/runner.py": "8ca682e38432e14429126bfb51b69f4520e0bcf0fd910c86594b584097b3d93c",
+      "research_v8_20260912/native_bridge/original_pair_bridge.py": "906a918c72a72279e1f2ceefe8426f60872e83e3cb4c11fcd9e673c33cc100da",
+      "src/attestflow/__init__.py": "2c7e8edf398022bb2c4fa96297525c596ddfc4841ab359be024242aa6c8e9b0d",
+      "src/attestflow/commitment.py": "a9b9abcbf02a959594e5cbbe9e51017ce08430feb6db0c2c1184ea0bcdf817dd",
+      "src/attestflow/compiler.py": "7ac5a33711c5a6b9599f06bc835ea76b45841c47ca1b3388910b7cd40e4f7af4",
+      "src/attestflow/contract.py": "4e0e9d2e13dd16911e2b1d002307236448fdddc3de00bbe66ddb5161e0879a4d",
+      "src/attestflow/ledger.py": "f9cb5e1116f1d5240b3307e8734f47b5c55110c9170762cf8eade028384ff9e3",
+      "src/attestflow/oracle.py": "afe946be5ff758e7f49bd295e0cea5a5f23d0d30573ff8166f0587d0f747122b",
+      "src/attestflow/trace.py": "20f936afc01f494a304ba3ca3c6e8b5aef3ef84dafabeeee90a63640a048954c"
+    }
+  },
+  "status": "COMPLETE"
+}

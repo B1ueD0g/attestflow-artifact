@@ -1,0 +1,8 @@
+{
+  "admin_auth": "explicit InsecureAllowAll inside network-none dummy container",
+  "body_sha256": "d761b244661526607dd3ee49e1baeea4c788c42abe23dd84a3babd9fdc0115fe",
+  "content_type": "application/json",
+  "method": "POST",
+  "sent_unix_ns": 1788849372160253328,
+  "url": "http://127.0.0.1:8082/kbs/v0/resource-policy"
+}

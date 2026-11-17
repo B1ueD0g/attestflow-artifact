@@ -1,0 +1,8 @@
+{
+  "admin_auth": "explicit InsecureAllowAll inside network-none dummy container",
+  "body_sha256": "390dd33dae9c6acaf793298d0b363a8f54a0b7a4fb14f77b816408b4c0542912",
+  "content_type": "application/json",
+  "method": "POST",
+  "sent_unix_ns": 1788849343477054077,
+  "url": "http://127.0.0.1:8082/kbs/v0/reference-value"
+}

@@ -1,0 +1,17 @@
+{
+  "capture_complete": true,
+  "diagnostic": "nonzero exit without success payload; RPC completion/effect unknown",
+  "kind": "NATIVE_PROCESS_ERROR",
+  "operation_id": "native-control-unwrap",
+  "output_bytes_base64": null,
+  "phi": null,
+  "process_closed": true,
+  "reply_json_base64": null,
+  "returncode": 101,
+  "rpc_error_candidate": true,
+  "scope": "DEVELOPMENT_CONTROL_CAPTURE",
+  "stderr_sha256": "6694829640cfb3ca527eb1fc75153035492d8ab774d6683b1da0573ff5b178e7",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "successful_output": null,
+  "target_comparison": "NOT_PERFORMED"
+}

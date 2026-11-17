@@ -1,0 +1,42 @@
+{
+  "argv": [
+    "/app/bin/ttrpc-cdh-tool",
+    "--socket",
+    "unix:///tmp/attestflow-v7-rpc-u8gtcti5/front.sock",
+    "--timeout",
+    "50",
+    "unwrap-key",
+    "--annotation-path",
+    "/app/output/formal-c03-001/client/unwrap-input.json"
+  ],
+  "capture_complete": true,
+  "cwd": "/app/output/formal-c03-001",
+  "ended_unix_ns": 1788849372336066339,
+  "env": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "RUST_LOG": "info",
+    "TZ": "UTC"
+  },
+  "errors": [],
+  "name": "client",
+  "pid": 53,
+  "process_closed": true,
+  "returncode": 0,
+  "signals": [],
+  "started_unix_ns": 1788849372247639340,
+  "streams": {
+    "stderr": {
+      "bytes": 0,
+      "eof": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 205,
+      "eof": true,
+      "sha256": "3a41aa43d765ae87e196d8a8b4ad8fb8a21bdee77c2044eacf8daed0491d78f0"
+    }
+  },
+  "timed_out": false
+}

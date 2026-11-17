@@ -1,0 +1,300 @@
+[
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": false,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-01",
+    "status": "PASS",
+    "truth": null
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": true,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-02",
+    "status": "PASS",
+    "truth": null
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": null,
+      "budget": "J3",
+      "c": false,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-03",
+    "status": "PASS",
+    "truth": null
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": false,
+      "budget": "J3",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-04",
+    "status": "PASS",
+    "truth": null
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "FALSE"
+    },
+    "disagreement": false,
+    "expected": "FALSE",
+    "generic": {
+      "compatibility_size": 1,
+      "compatible_states": [
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "FALSE"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": true,
+      "budget": "J3",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-05",
+    "status": "PASS",
+    "truth": null
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": null,
+      "budget": "J3",
+      "c": true,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-06",
+    "status": "PASS",
+    "truth": null
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "disagreement": false,
+    "expected": "TRUE",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "TRUE"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": false,
+      "budget": "J3",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-07",
+    "status": "PASS",
+    "truth": null
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 2,
+      "compatible_states": [
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": true,
+      "budget": "J3",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-08",
+    "status": "PASS",
+    "truth": null
+  },
+  {
+    "direct": {
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "disagreement": false,
+    "expected": "UNKNOWN",
+    "generic": {
+      "compatibility_size": 4,
+      "compatible_states": [
+        {
+          "R": false,
+          "c": false
+        },
+        {
+          "R": true,
+          "c": false
+        },
+        {
+          "R": false,
+          "c": true
+        },
+        {
+          "R": true,
+          "c": true
+        }
+      ],
+      "status": "OK",
+      "verdict": "UNKNOWN"
+    },
+    "matrix": "PARTIAL",
+    "observation": {
+      "R": null,
+      "budget": "J3",
+      "c": null,
+      "context": "opaque-fixed-application-context-v1",
+      "kbs_background": "opaque-fixed-acquisition-background-v1"
+    },
+    "row_id": "partial-J3-09",
+    "status": "PASS",
+    "truth": null
+  }
+]

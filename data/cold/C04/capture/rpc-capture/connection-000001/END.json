@@ -1,0 +1,27 @@
+{
+  "capture_complete": true,
+  "client_peer": "",
+  "connection_id": "connection-000001",
+  "directions": {
+    "client_to_upstream": {
+      "captured_file_bytes": 507,
+      "captured_file_sha256": "bc05f7711d849df6d5809f08773498442710601d077df3d194dfc1bbd8adf6fe",
+      "eof_observed": true,
+      "read_bytes": 507,
+      "submitted_bytes": 507,
+      "write_eof_submitted": true
+    },
+    "upstream_to_client": {
+      "captured_file_bytes": 63,
+      "captured_file_sha256": "57c17ac2cac110f75b25750122a96a32ba022c19dcca3a6c2fd801efba617d5b",
+      "eof_observed": true,
+      "read_bytes": 63,
+      "submitted_bytes": 63,
+      "write_eof_submitted": true
+    }
+  },
+  "ended_unix_ns": 1788849386538326107,
+  "errors": [],
+  "started_unix_ns": 1788849386456648178,
+  "upstream_peer": "/tmp/attestflow-v7-rpc-mv4ppl4_/back.sock"
+}

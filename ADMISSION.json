@@ -1,0 +1,74 @@
+{
+  "binary_sha256": {
+    "kbs": "ad14899a47fb42968c6cd400c17cd852312d60e056fb5989212f6ac4be59c8f7",
+    "ttrpc-aa": "2a4962f582fad7161aed87ead1ae483e278f630cc27e0a4e5d6c51454076372e",
+    "ttrpc-cdh": "03a72d8091d735ac686f3010795341680a6dd79d3c367d71f3149c9ecbcc4c45",
+    "ttrpc-cdh-tool": "9c1a7220aa9959cceaf7e9d3002f69ed9954a0c4bb2863ba5961a1be72c71035"
+  },
+  "boundary": "Recorded origin, local launch and clocks remain trust assumptions; native binaries/builds are not included or rebuilt; no source-to-binary or external origin authentication claim.",
+  "cases": [
+    {
+      "active_policy": "check-contra",
+      "id": "C01",
+      "native_output_dir": "/app/output/formal-c01-001",
+      "rv_svn": "1"
+    },
+    {
+      "active_policy": "check-contra",
+      "id": "C02",
+      "native_output_dir": "/app/output/formal-c02-001",
+      "rv_svn": "empty"
+    },
+    {
+      "active_policy": "allow-all",
+      "id": "C03",
+      "native_output_dir": "/app/output/formal-c03-001",
+      "rv_svn": "empty"
+    },
+    {
+      "active_policy": "check-contra",
+      "id": "C04",
+      "native_output_dir": "/app/output/formal-c04-001",
+      "rv_svn": "1"
+    },
+    {
+      "active_policy": "check-contra",
+      "id": "C05",
+      "native_output_dir": "/app/output/formal-c05-001",
+      "rv_svn": "1"
+    },
+    {
+      "active_policy": "check-contra",
+      "id": "C06",
+      "native_output_dir": "/app/output/formal-c06-001",
+      "rv_svn": "1"
+    }
+  ],
+  "expected_issuer": "CoCo-Attestation-Service",
+  "frozen_source_sha256": {
+    "code/research_v7_20260908/__init__.py": "17eda4382d8060e5c5e6d45996f06d7d8c9359c7b47ad7c44cd41565e7982d12",
+    "code/research_v7_20260908/collector/__init__.py": "ce917f8e6163885ee84d71c860572b9131e64551d41975434f6116984054c7db",
+    "code/research_v7_20260908/collector/tcp_relay.py": "ed516730bcc326d382f7e4f052ad65f8780f9e1637a67efc903d6da32bbac87d",
+    "code/research_v7_20260908/collector/timed_tcp_relay.py": "4f210d5e5de6dc83342f598033ec52cd04797612c0f8b13a0189053a899fb9b9",
+    "code/research_v7_20260908/controls/__init__.py": "51adbab2e1f3624671bd3a961c15ef2a9ff9152918af0e5f2fa0252196dba8b0",
+    "code/research_v7_20260908/controls/http_chain.py": "df4e5be9dbc9d5ddb7edc5b9a582d7ff1a7898a9d1b0c093795782e343f32bf7",
+    "code/research_v7_20260908/controls/minimal_model.py": "c8d78a141701e0706d48add9d2977aa47770720a68170ca65fe356a557e406df",
+    "code/research_v7_20260908/controls/validate_control.py": "1c084b6a607226a21bb89f151be3923d6ccc8196dc0ba188409ca25a5bdb65c4",
+    "code/research_v7_20260908/runtime/__init__.py": "743631dc08b45384c203674e0951b55118dc858a32866ea0c85a31bdfe3d1cee",
+    "code/research_v7_20260908/runtime/facts.py": "66d888dcdec2662c1b38fa558eb7e628f7aed21e58f672aa1a8d081b4d9f1632",
+    "code/research_v7_20260908/runtime/native_output.py": "f9cfdd27dc7f9270ca3cb5fd3e178c53f4bc0b3e0e5a2d394755cbf635f34e69",
+    "code/research_v7_20260908/smoke/__init__.py": "6ff78dd048affe711fd760ef51d0dd12d8a99ac59da97ba2fdd256078dd60cc5",
+    "code/research_v7_20260908/smoke/c01_smoke.py": "f1ca5f665c27be2598be3f4360f7cbe6899fe6373f9ff89d6eeb5ea0772b44bc",
+    "code/research_v7_20260908/smoke/validate_c01.py": "620b98fe95dfe4bef2d41c237b16d078f356a5261a2463d76348055be270d002",
+    "code/research_v7_20260908/wire/__init__.py": "57f7dbb79ae4e4cac8cc2680660ad7113dcdc98abe9aa0844c8cd9efa506c48e",
+    "code/research_v7_20260908/wire/ear_claims.py": "9c7d990fa9a77c18939f3086a9c796ab0f76270d7ab562dcf1a5c6279924fbc5",
+    "code/research_v7_20260908/wire/http_capture.py": "588b68e07b45108fec0ff8301b84d68247bfae84905e235e67e11e7a5bb80d69",
+    "code/research_v7_20260908/wire/relay_evidence.py": "9c2c138d452db857ed4bbb5009f5ed3d1d98bce32ac26a611b1f42e659f3dc21",
+    "code/research_v7_20260908/wire/ttrpc_capture.py": "12967d44b0072668417e19d3fe0a19d93fbdf7264f4ef5b8ebd99b20295791d9"
+  },
+  "original_freeze_sha256": "de9bc76631d48cc6d31d2229aa97a08d646cc0e262fe27a950e8e780a53ac25e",
+  "original_freeze_source": "research_v7_20260908/preparation/formal-freeze-001/FREEZE.json",
+  "public_release_note": "Derived source pins for this public subset. Original capture bytes and capture manifests are unchanged except exactly six omitted private key files listed in RELEASE_OMISSIONS.json.",
+  "status": "DERIVED_RELATIVE_PATH_ADMISSION_FOR_LOCAL_REVIEW_ONLY",
+  "transformation": "Extract case configuration, original binary hashes and selected unchanged validator/runtime source hashes; omit private host paths, build archives and unneeded source anchors. Not the original full launch admission."
+}

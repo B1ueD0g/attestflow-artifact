@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/app/bin/ttrpc-cdh",
+    "-c",
+    "/app/output/formal-c01-001/config/cdh.toml"
+  ],
+  "capture_complete": false,
+  "cwd": "/app/output/formal-c01-001",
+  "env": {
+    "AA_KBC_PARAMS": "cc_kbc::http://127.0.0.1:8081",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "RUST_LOG": "info",
+    "TZ": "UTC"
+  },
+  "errors": [],
+  "name": "cdh",
+  "pid": null,
+  "process_closed": false,
+  "returncode": null,
+  "signals": [],
+  "started_unix_ns": 1788849343489112674,
+  "streams": {},
+  "timed_out": false
+}

@@ -1,0 +1,9 @@
+{
+  "algorithm": "P-256 / ES256",
+  "boundary": "local run-created trust anchor; not independent external endorsement",
+  "dummy_ephemeral_only": true,
+  "private_key_path": "/app/output/formal-c03-001/private/as-signing-key.pem",
+  "private_key_sha256": "78e0c28e151c0b0e14dcb40273f8f1d96086a9da1309a80a43cd77378950bbcb",
+  "public_pem_sha256": "0812c7762e6d46fc32b4ca09e8b586bbf76c0f0075d093dcf5e8655070760f34",
+  "public_spki_der_sha256": "e7fa84e359127101ae6f16d233327cb4abfa9f883dfd39ce31b3c79a1a77b91e"
+}

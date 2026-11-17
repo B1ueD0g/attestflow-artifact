@@ -1,0 +1,40 @@
+[2m2026-09-08T06:36:54.626544Z[0m [32m INFO[0m [2mttrpc_aa[0m[2m:[0m Welcome to Confidential Containers Attestation Agent (ttRPC version)!
+
+
+  ___   _    _              _          _    _                     ___                       _   
+ / _ \ | |  | |            | |        | |  (_)                   / _ \                     | |  
+/ /_\ \| |_ | |_  ___  ___ | |_  __ _ | |_  _   ___   _ __      / /_\ \  __ _   ___  _ __  | |_ 
+|  _  || __|| __|/ _ \/ __|| __|/ _` || __|| | / _ \ | '_ \     |  _  | / _` | / _ \| '_ \ | __|
+| | | || |_ | |_|  __/\__ \| |_| (_| || |_ | || (_) || | | |    | | | || (_| ||  __/| | | || |_ 
+\_| |_/ \__| \__|\___||___/ \__|\__,_| \__||_| \___/ |_| |_|    \_| |_/ \__, | \___||_| |_| \__|
+                                                                         __/ |                  
+                                                                        |___/                                                                  
+version: -
+supported attesters: SAMPLE, SAMPLE_DEVICE
+token plugins: KBS
+buildtime: 2026-09-08 04:21:39 +00:00
+loglevel: info
+rpc: ttrpc
+
+[2m2026-09-08T06:36:54.626578Z[0m [32m INFO[0m [2mttrpc_aa[0m[2m:[0m Using config file: /app/output/formal-c06-001/config/aa.toml
+[2m2026-09-08T06:36:54.627961Z[0m [33m WARN[0m [2mattester[0m[2m:[0m No TEE platform detected. Sample Attester will be used.
+         If you are expecting to collect evidence from inside a confidential guest,
+         either your guest is not configured correctly, or your attestation client
+         was not built with support for the platform.
+
+         Verify that your guest is a confidential guest and that your client
+         (such as kbs-client or attestation-agent) was built with the feature
+         corresponding to your platform.
+
+         Attestation will continue using the fallback sample attester.
+[2m2026-09-08T06:36:54.696378Z[0m [33m WARN[0m [2mattester[0m[2m:[0m No TEE platform detected. Sample Attester will be used.
+         If you are expecting to collect evidence from inside a confidential guest,
+         either your guest is not configured correctly, or your attestation client
+         was not built with support for the platform.
+
+         Verify that your guest is a confidential guest and that your client
+         (such as kbs-client or attestation-agent) was built with the feature
+         corresponding to your platform.
+
+         Attestation will continue using the fallback sample attester.
+[2m2026-09-08T06:36:54.807048Z[0m [32m INFO[0m [2mttrpc_aa[0m[2m:[0m SIGINT received, gracefully shutdown.
